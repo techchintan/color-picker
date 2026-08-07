@@ -5,7 +5,6 @@ import {
   formatColorString,
   getColorFormats,
   parseHex,
-  rgbToHex,
 } from '../lib/color';
 import {
   addColorToPalette,
@@ -22,7 +21,6 @@ import './popup.css';
 const TABS = [
   { id: 'history', label: 'History' },
   { id: 'palettes', label: 'Palettes' },
-  { id: 'image', label: 'Image' },
 ];
 
 const FORMAT_ROWS = [
@@ -47,9 +45,6 @@ const App = () => {
   const [paletteName, setPaletteName] = useState('');
   const [renamingId, setRenamingId] = useState(null);
   const [renameValue, setRenameValue] = useState('');
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const canvasRef = useRef(null);
-  const imageRef = useRef(null);
   const toastTimer = useRef(null);
 
   const formats = getColorFormats(currentColor);
@@ -148,47 +143,8 @@ const App = () => {
     setPalettes(next);
   };
 
-  const drawImageToCanvas = (img) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const maxWidth = 308;
-    const maxHeight = 180;
-    const scale = Math.min(maxWidth / img.width, maxHeight / img.height, 1);
-    const width = Math.max(1, Math.round(img.width * scale));
-    const height = Math.max(1, Math.round(img.height * scale));
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext('2d', { willReadFrequently: true });
-    ctx.clearRect(0, 0, width, height);
-    ctx.drawImage(img, 0, 0, width, height);
-    setImageLoaded(true);
-  };
-
-  const handleImageUpload = (event) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      const img = new Image();
-      img.onload = () => {
-        imageRef.current = img;
-        drawImageToCanvas(img);
-      };
-      img.src = reader.result;
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const handleCanvasClick = async (event) => {
-    const canvas = canvasRef.current;
-    if (!canvas || !imageLoaded) return;
-    const rect = canvas.getBoundingClientRect();
-    const x = Math.floor(((event.clientX - rect.left) / rect.width) * canvas.width);
-    const y = Math.floor(((event.clientY - rect.top) / rect.height) * canvas.height);
-    const ctx = canvas.getContext('2d', { willReadFrequently: true });
-    const pixel = ctx.getImageData(x, y, 1, 1).data;
-    const hex = rgbToHex(pixel[0], pixel[1], pixel[2]);
-    await selectColor(hex);
+  const openImagePage = () => {
+    chrome.tabs.create({ url: chrome.runtime.getURL('image.html') });
   };
 
   return (
@@ -387,30 +343,18 @@ const App = () => {
         </section>
       )}
 
-      {tab === 'image' && (
-        <section className="panel image-tools">
-          <label className="btn btn-ghost file-btn">
-            Upload image
-            <input type="file" accept="image/*" onChange={handleImageUpload} />
-          </label>
-          <div className="canvas-wrap">
-            <canvas ref={canvasRef} onClick={handleCanvasClick} />
-          </div>
-          <p className="hint">
-            {imageLoaded
-              ? 'Click any pixel on the image to sample its color.'
-              : 'Upload a PNG, JPG, or WebP, then click to pick a color.'}
-          </p>
-        </section>
-      )}
-
-      <button
-        type="button"
-        className="footer-link"
-        onClick={() => chrome.runtime.openOptionsPage()}
-      >
-        Settings & privacy
-      </button>
+      <div className="footer-links">
+        <button type="button" className="footer-link" onClick={openImagePage}>
+          Pick from image
+        </button>
+        <button
+          type="button"
+          className="footer-link"
+          onClick={() => chrome.runtime.openOptionsPage()}
+        >
+          Settings & privacy
+        </button>
+      </div>
 
       <div className={`toast${toast ? ' show' : ''}`} role="status">
         {toast}

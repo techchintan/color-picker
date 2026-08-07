@@ -202,7 +202,7 @@ input {
 
 .tabs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 4px;
   padding: 4px;
   border-radius: 10px;
@@ -339,46 +339,6 @@ input {
   border-color: rgba(61, 155, 122, 0.7);
 }
 
-.image-tools {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.file-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.file-btn input {
-  display: none;
-}
-
-.canvas-wrap {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  overflow: hidden;
-  background:
-    linear-gradient(45deg, #2a2a2a 25%, transparent 25%),
-    linear-gradient(-45deg, #2a2a2a 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #2a2a2a 75%),
-    linear-gradient(-45deg, transparent 75%, #2a2a2a 75%);
-  background-size: 12px 12px;
-  background-position: 0 0, 0 6px, 6px -6px, -6px 0;
-  max-height: 180px;
-}
-
-.canvas-wrap canvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 180px;
-  cursor: crosshair;
-}
-
 .toast {
   position: fixed;
   left: 50%;
@@ -407,6 +367,12 @@ input {
   color: var(--ink-muted);
   font-size: 11px;
   line-height: 1.4;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .footer-link {

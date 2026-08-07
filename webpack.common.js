@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     popup: path.resolve('src/popup/popup.jsx'),
     options: path.resolve('src/options/options.jsx'),
+    image: path.resolve('src/image/image.jsx'),
     background: path.resolve('src/background/background.js'),
   },
   module: {
@@ -44,7 +45,8 @@ module.exports = {
     }),
     ...getHtmlPlugins([
       'popup',
-      'options'
+      'options',
+      'image',
     ]),
   ],
   output: {
