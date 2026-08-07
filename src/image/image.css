@@ -1,11 +1,14 @@
 :root {
-  --bg-0: #0f1412;
-  --bg-1: #17201c;
-  --ink: #f3efe6;
-  --ink-muted: #a8b3ab;
-  --accent: #3d9b7a;
-  --accent-strong: #2f6f5e;
-  --line: rgba(243, 239, 230, 0.12);
+  --bg-0: #f5faf7;
+  --bg-1: #e8f3ee;
+  --surface: #ffffff;
+  --ink: #18332b;
+  --ink-muted: #5d7369;
+  --accent: #0e8f6f;
+  --accent-strong: #0b6f56;
+  --accent-soft: rgba(14, 143, 111, 0.12);
+  --warm: rgba(232, 140, 74, 0.16);
+  --line: rgba(24, 51, 43, 0.1);
   --font-ui: Candara, 'Segoe UI', Calibri, 'Trebuchet MS', sans-serif;
   --font-display: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
 }
@@ -20,7 +23,8 @@ body {
   color: var(--ink);
   font-family: var(--font-ui);
   background:
-    radial-gradient(80% 60% at 10% 0%, rgba(61, 155, 122, 0.22), transparent 55%),
+    radial-gradient(80% 60% at 8% 0%, rgba(14, 143, 111, 0.14), transparent 55%),
+    radial-gradient(70% 50% at 100% 20%, var(--warm), transparent 50%),
     linear-gradient(165deg, var(--bg-0), var(--bg-1));
 }
 
@@ -38,16 +42,18 @@ body {
 }
 
 .header img {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(24, 51, 43, 0.1);
 }
 
 .header h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 400;
+  color: var(--ink);
 }
 
 .header p {
@@ -57,16 +63,19 @@ body {
 }
 
 .section {
-  margin-bottom: 22px;
-  padding: 18px;
+  margin-bottom: 18px;
+  padding: 20px;
   border: 1px solid var(--line);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 8px 24px rgba(24, 51, 43, 0.05);
+  backdrop-filter: blur(6px);
 }
 
 .section h2 {
   margin: 0 0 6px;
-  font-size: 16px;
+  font-size: 17px;
+  color: var(--ink);
 }
 
 .section > p {
@@ -86,17 +95,28 @@ body {
 .btn {
   appearance: none;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 10px 14px;
   cursor: pointer;
   font: inherit;
-  font-weight: 600;
+  font-weight: 700;
+  transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--surface);
   border-color: var(--line);
   color: var(--ink);
+  box-shadow: 0 2px 8px rgba(24, 51, 43, 0.04);
+}
+
+.btn-ghost:hover {
+  border-color: rgba(14, 143, 111, 0.3);
+  background: #f3faf7;
 }
 
 .file-btn {
@@ -112,17 +132,19 @@ body {
 
 .canvas-wrap {
   position: relative;
-  min-height: 220px;
+  min-height: 240px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   background:
-    linear-gradient(45deg, #2a2a2a 25%, transparent 25%),
-    linear-gradient(-45deg, #2a2a2a 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #2a2a2a 75%),
-    linear-gradient(-45deg, transparent 75%, #2a2a2a 75%);
-  background-size: 12px 12px;
-  background-position: 0 0, 0 6px, 6px -6px, -6px 0;
+    linear-gradient(45deg, #e6ece9 25%, transparent 25%),
+    linear-gradient(-45deg, #e6ece9 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e6ece9 75%),
+    linear-gradient(-45deg, transparent 75%, #e6ece9 75%);
+  background-color: #f7faf8;
+  background-size: 14px 14px;
+  background-position: 0 0, 0 7px, 7px -7px, -7px 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .canvas-wrap canvas {
@@ -163,10 +185,11 @@ body {
   display: grid;
   place-items: center;
   min-height: 140px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--line);
   font-family: var(--font-display);
   font-size: 18px;
+  box-shadow: 0 10px 24px rgba(24, 51, 43, 0.1);
 }
 
 .formats {
@@ -179,14 +202,15 @@ body {
   grid-template-columns: 56px 1fr auto;
   gap: 10px;
   align-items: center;
-  padding: 8px 10px;
+  padding: 9px 11px;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  background: var(--surface);
 }
 
 .format-row.preferred {
-  border-color: rgba(61, 155, 122, 0.55);
+  border-color: rgba(14, 143, 111, 0.4);
+  background: var(--accent-soft);
 }
 
 .format-row .label {
@@ -205,19 +229,25 @@ body {
   appearance: none;
   border: 0;
   background: transparent;
-  color: var(--accent);
+  color: var(--accent-strong);
   cursor: pointer;
   font: inherit;
   font-size: 12px;
   font-weight: 700;
   padding: 4px;
+  border-radius: 6px;
+}
+
+.copy:hover {
+  background: rgba(14, 143, 111, 0.12);
 }
 
 .status {
   min-height: 20px;
   margin-top: 12px;
   font-size: 13px;
-  color: var(--accent);
+  font-weight: 600;
+  color: var(--accent-strong);
 }
 
 @media (max-width: 640px) {

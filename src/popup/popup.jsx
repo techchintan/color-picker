@@ -147,6 +147,10 @@ const App = () => {
     chrome.tabs.create({ url: chrome.runtime.getURL('image.html') });
   };
 
+  const openGradientPage = () => {
+    chrome.tabs.create({ url: chrome.runtime.getURL('gradient.html') });
+  };
+
   return (
     <div className="app">
       <header className="brand">
@@ -346,6 +350,9 @@ const App = () => {
       <div className="footer-links">
         <button type="button" className="footer-link" onClick={openImagePage}>
           Pick from image
+        </button>
+        <button type="button" className="footer-link" onClick={openGradientPage}>
+          Gradient maker
         </button>
         <button
           type="button"

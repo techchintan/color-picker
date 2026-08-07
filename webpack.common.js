@@ -8,6 +8,7 @@ module.exports = {
     popup: path.resolve('src/popup/popup.jsx'),
     options: path.resolve('src/options/options.jsx'),
     image: path.resolve('src/image/image.jsx'),
+    gradient: path.resolve('src/gradient/gradient.jsx'),
     background: path.resolve('src/background/background.js'),
   },
   module: {
@@ -47,6 +48,7 @@ module.exports = {
       'popup',
       'options',
       'image',
+      'gradient',
     ]),
   ],
   output: {
