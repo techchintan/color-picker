@@ -8,6 +8,7 @@ import {
   rgbToHex,
 } from '../lib/color';
 import { addToHistory, getAllState } from '../lib/storage';
+import { applyTheme } from '../lib/theme';
 import './image.css';
 
 const FORMAT_ROWS = [
@@ -38,6 +39,10 @@ const App = () => {
       setSettings(state.settings);
     });
   }, []);
+
+  useEffect(() => {
+    applyTheme(currentColor);
+  }, [currentColor]);
 
   const flash = (message) => {
     setStatus(message);

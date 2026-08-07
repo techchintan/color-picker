@@ -1,6 +1,8 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { contrastTextColor, parseHex } from '../lib/color';
+import { getAllState } from '../lib/storage';
+import { applyTheme } from '../lib/theme';
 import './gradient.css';
 
 const PRESETS = [
@@ -100,6 +102,14 @@ const App = () => {
   const cssBlock = `background: ${cssValue};`;
   const sortedStops = useMemo(() => sortStops(stops), [stops]);
   const activeStop = stops.find((stop) => stop.id === activeId) || sortedStops[0];
+
+  useEffect(() => {
+    getAllState().then((state) => applyTheme(state.currentColor));
+  }, []);
+
+  useEffect(() => {
+    if (activeStop?.color) applyTheme(activeStop.color);
+  }, [activeStop?.color]);
 
   const flash = (message) => {
     setStatus(message);

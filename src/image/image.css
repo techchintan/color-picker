@@ -1,14 +1,31 @@
 :root {
   --bg-0: #f5faf7;
   --bg-1: #e8f3ee;
+  --bg-end: #f8fbf9;
   --surface: #ffffff;
   --ink: #18332b;
   --ink-muted: #5d7369;
   --accent: #0e8f6f;
+  --accent-bright: #19a87f;
   --accent-strong: #0b6f56;
   --accent-soft: rgba(14, 143, 111, 0.12);
+  --accent-soft-strong: rgba(14, 143, 111, 0.16);
+  --accent-border: rgba(14, 143, 111, 0.4);
+  --accent-border-soft: rgba(14, 143, 111, 0.28);
+  --accent-border-mid: rgba(14, 143, 111, 0.3);
+  --accent-border-strong: rgba(14, 143, 111, 0.55);
+  --accent-border-focus: rgba(14, 143, 111, 0.45);
+  --accent-shadow: rgba(14, 143, 111, 0.28);
+  --accent-shadow-soft: rgba(14, 143, 111, 0.25);
+  --accent-focus-ring: rgba(14, 143, 111, 0.12);
+  --accent-glow: rgba(14, 143, 111, 0.14);
+  --on-accent: #f7fff9;
+  --ghost-hover: #f3faf7;
   --warm: rgba(232, 140, 74, 0.16);
   --line: rgba(24, 51, 43, 0.1);
+  --ink-shadow: rgba(24, 51, 43, 0.08);
+  --ink-shadow-soft: rgba(24, 51, 43, 0.04);
+  --ink-shadow-faint: rgba(24, 51, 43, 0.03);
   --font-ui: Candara, 'Segoe UI', Calibri, 'Trebuchet MS', sans-serif;
   --font-display: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
 }
@@ -23,9 +40,10 @@ body {
   color: var(--ink);
   font-family: var(--font-ui);
   background:
-    radial-gradient(80% 60% at 8% 0%, rgba(14, 143, 111, 0.14), transparent 55%),
+    radial-gradient(80% 60% at 8% 0%, var(--accent-glow), transparent 55%),
     radial-gradient(70% 50% at 100% 20%, var(--warm), transparent 50%),
     linear-gradient(165deg, var(--bg-0), var(--bg-1));
+  transition: color 180ms ease, background 220ms ease;
 }
 
 .page {
@@ -45,7 +63,7 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(24, 51, 43, 0.1);
+  box-shadow: 0 8px 20px var(--ink-shadow);
 }
 
 .header h1 {
@@ -68,7 +86,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 8px 24px rgba(24, 51, 43, 0.05);
+  box-shadow: 0 8px 24px var(--ink-shadow-soft);
   backdrop-filter: blur(6px);
 }
 
@@ -111,12 +129,12 @@ body {
   background: var(--surface);
   border-color: var(--line);
   color: var(--ink);
-  box-shadow: 0 2px 8px rgba(24, 51, 43, 0.04);
+  box-shadow: 0 2px 8px var(--ink-shadow-soft);
 }
 
 .btn-ghost:hover {
-  border-color: rgba(14, 143, 111, 0.3);
-  background: #f3faf7;
+  border-color: var(--accent-border-mid);
+  background: var(--ghost-hover);
 }
 
 .file-btn {
@@ -137,11 +155,11 @@ body {
   border-radius: 12px;
   overflow: hidden;
   background:
-    linear-gradient(45deg, #e6ece9 25%, transparent 25%),
-    linear-gradient(-45deg, #e6ece9 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #e6ece9 75%),
-    linear-gradient(-45deg, transparent 75%, #e6ece9 75%);
-  background-color: #f7faf8;
+    linear-gradient(45deg, var(--bg-1) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--bg-1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--bg-1) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--bg-1) 75%);
+  background-color: var(--bg-0);
   background-size: 14px 14px;
   background-position: 0 0, 0 7px, 7px -7px, -7px 0;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -189,7 +207,7 @@ body {
   border: 1px solid var(--line);
   font-family: var(--font-display);
   font-size: 18px;
-  box-shadow: 0 10px 24px rgba(24, 51, 43, 0.1);
+  box-shadow: 0 10px 24px var(--ink-shadow);
 }
 
 .formats {
@@ -209,7 +227,7 @@ body {
 }
 
 .format-row.preferred {
-  border-color: rgba(14, 143, 111, 0.4);
+  border-color: var(--accent-border);
   background: var(--accent-soft);
 }
 
@@ -239,7 +257,7 @@ body {
 }
 
 .copy:hover {
-  background: rgba(14, 143, 111, 0.12);
+  background: var(--accent-soft);
 }
 
 .status {

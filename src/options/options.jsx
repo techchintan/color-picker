@@ -3,19 +3,29 @@ import { createRoot } from 'react-dom/client';
 import {
   clearAllData,
   clearHistory,
+  DEFAULT_COLOR,
   DEFAULT_SETTINGS,
   getAllState,
   saveSettings,
 } from '../lib/storage';
+import { applyTheme } from '../lib/theme';
 import './options.css';
 
 const App = () => {
   const [settings, setSettings] = useState(DEFAULT_SETTINGS);
+  const [currentColor, setCurrentColor] = useState(DEFAULT_COLOR);
   const [status, setStatus] = useState('');
 
   useEffect(() => {
-    getAllState().then((state) => setSettings(state.settings));
+    getAllState().then((state) => {
+      setSettings(state.settings);
+      setCurrentColor(state.currentColor);
+    });
   }, []);
+
+  useEffect(() => {
+    applyTheme(currentColor);
+  }, [currentColor]);
 
   const flash = (message) => {
     setStatus(message);
@@ -40,6 +50,7 @@ const App = () => {
     if (!confirmed) return;
     await clearAllData();
     setSettings({ ...DEFAULT_SETTINGS });
+    setCurrentColor(DEFAULT_COLOR);
     flash('All local data cleared');
   };
 

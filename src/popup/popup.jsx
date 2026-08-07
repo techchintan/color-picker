@@ -16,6 +16,7 @@ import {
   removeColorFromPalette,
   renamePalette,
 } from '../lib/storage';
+import { applyTheme } from '../lib/theme';
 import './popup.css';
 
 const TABS = [
@@ -58,6 +59,10 @@ const App = () => {
       setSettings(state.settings);
     });
   }, []);
+
+  useEffect(() => {
+    applyTheme(currentColor);
+  }, [currentColor]);
 
   const showToast = (message) => {
     setToast(message);

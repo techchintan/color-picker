@@ -1,15 +1,33 @@
 :root {
   --bg-0: #f5faf7;
   --bg-1: #e8f3ee;
+  --bg-end: #f8fbf9;
   --surface: #ffffff;
   --ink: #18332b;
   --ink-muted: #5d7369;
   --accent: #0e8f6f;
+  --accent-bright: #19a87f;
   --accent-strong: #0b6f56;
   --accent-soft: rgba(14, 143, 111, 0.12);
+  --accent-soft-strong: rgba(14, 143, 111, 0.16);
+  --accent-border: rgba(14, 143, 111, 0.4);
+  --accent-border-soft: rgba(14, 143, 111, 0.28);
+  --accent-border-mid: rgba(14, 143, 111, 0.3);
+  --accent-border-strong: rgba(14, 143, 111, 0.55);
+  --accent-border-focus: rgba(14, 143, 111, 0.45);
+  --accent-shadow: rgba(14, 143, 111, 0.28);
+  --accent-shadow-soft: rgba(14, 143, 111, 0.25);
+  --accent-focus-ring: rgba(14, 143, 111, 0.12);
+  --accent-glow: rgba(14, 143, 111, 0.14);
+  --on-accent: #f7fff9;
+  --ghost-hover: #f3faf7;
   --warm: rgba(232, 140, 74, 0.16);
   --line: rgba(24, 51, 43, 0.1);
+  --ink-shadow: rgba(24, 51, 43, 0.08);
+  --ink-shadow-soft: rgba(24, 51, 43, 0.04);
+  --ink-shadow-faint: rgba(24, 51, 43, 0.03);
   --danger: #c45245;
+  --danger-soft: rgba(196, 82, 69, 0.12);
   --font-ui: Candara, 'Segoe UI', Calibri, 'Trebuchet MS', sans-serif;
   --font-display: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
 }
@@ -24,9 +42,10 @@ body {
   color: var(--ink);
   font-family: var(--font-ui);
   background:
-    radial-gradient(80% 60% at 8% 0%, rgba(14, 143, 111, 0.14), transparent 55%),
+    radial-gradient(80% 60% at 8% 0%, var(--accent-glow), transparent 55%),
     radial-gradient(70% 50% at 100% 20%, var(--warm), transparent 50%),
     linear-gradient(165deg, var(--bg-0), var(--bg-1));
+  transition: color 180ms ease, background 220ms ease;
 }
 
 .page {
@@ -46,7 +65,7 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(24, 51, 43, 0.1);
+  box-shadow: 0 8px 20px var(--ink-shadow);
 }
 
 .header h1 {
@@ -69,7 +88,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 8px 24px rgba(24, 51, 43, 0.05);
+  box-shadow: 0 8px 24px var(--ink-shadow-soft);
   backdrop-filter: blur(6px);
 }
 
@@ -119,8 +138,8 @@ body {
 
 .field select:focus,
 .field input[type='number']:focus {
-  border-color: rgba(14, 143, 111, 0.55);
-  box-shadow: 0 0 0 3px rgba(14, 143, 111, 0.12);
+  border-color: var(--accent-border-strong);
+  box-shadow: 0 0 0 3px var(--accent-focus-ring);
 }
 
 .checkbox {
@@ -158,9 +177,9 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(180deg, #19a87f, var(--accent-strong));
-  color: #f7fff9;
-  box-shadow: 0 6px 16px rgba(14, 143, 111, 0.25);
+  background: linear-gradient(180deg, var(--accent-bright), var(--accent-strong));
+  color: var(--on-accent);
+  box-shadow: 0 6px 16px var(--accent-shadow-soft);
 }
 
 .btn-ghost {
@@ -170,8 +189,8 @@ body {
 }
 
 .btn-ghost:hover {
-  border-color: rgba(14, 143, 111, 0.3);
-  background: #f3faf7;
+  border-color: var(--accent-border-mid);
+  background: var(--ghost-hover);
 }
 
 .btn-danger {
