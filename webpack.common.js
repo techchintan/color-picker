@@ -8,7 +8,6 @@ module.exports = {
     popup: path.resolve('src/popup/popup.jsx'),
     options: path.resolve('src/options/options.jsx'),
     background: path.resolve('src/background/background.js'),
-    contentScript: path.resolve('src/contentScript/contentScript.jsx'),
   },
   module: {
     rules: [
@@ -55,7 +54,7 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks(chunk) {
-        return chunk.name !== 'contentScript' && chunk.name !== 'background'
+        return chunk.name !== 'background'
       }
     },
   }
@@ -63,7 +62,7 @@ module.exports = {
 
 function getHtmlPlugins(chunks) {
   return chunks.map(chunk => new HtmlPlugin({
-    title: 'React Extension',
+    title: 'Color Picker',
     filename: `${chunk}.html`,
     chunks: [chunk],
   }))

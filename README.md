@@ -1,35 +1,51 @@
-# React Chrome Extension Boilerplate
+# Color Picker HEX | Eyedropper
 
-Boilerplate for building Chrome Extensions in React and TypeScript using a simple Webpack build process.
+Privacy-first Chrome extension to pick colors from any screen or uploaded image, convert HEX / RGB / HSL / CMYK, copy in one click, and save history plus named palettes locally.
 
-## Getting Started
+## Features
 
-1. `npm i` to install dependancies
-2. `npm start` to start running the fast development mode Webpack build process that bundle files into the `dist` folder
-3. `npm i --save-dev <package_name>` to install new packages
+- Native **EyeDropper** pixel pick from any webpage or screen
+- Format conversion: **HEX**, **RGB**, **HSL**, **CMYK**
+- One-click copy (optional auto-copy of preferred format)
+- Color history and named palettes in `chrome.storage.local`
+- Pick colors from an uploaded image (canvas sampling)
+- Options page for defaults, clear data, and privacy notes
 
-## Loading The Chrome Extension
+## Permissions
 
-1. Open Chrome and navigate to `chrome://extensions/`
-2. Toggle on `Developer mode` in the top right corner
-3. Click `Load unpacked`
-4. Select the entire `dist` folder
+Only **`storage`**. No host permissions, no content scripts, no analytics, no network calls for core features.
 
-## Production Build
+## Develop
 
-1. `npm run build` to generate a minimized production build in the `dist` folder
-2. ZIP the entire `dist` folder (e.g. `dist.zip`)
-3. Publish the ZIP file on the Chrome Web Store Developer Dashboard!
+```bash
+npm i
+npm start
+```
 
-## Initial Steps
+Webpack watches and writes bundles to `dist/`.
 
-1. `git init` to start a new git repo for tracking your changes, do an initial base commit with all the default files
-2. Update `package.json`, important fields include `author`, `version`, `name` and `description`
-3. Update `manifest.json`, important fields include `version`, `name` and `description`
-4. Update `webpack.commmon.js`, the title in the `getHtmlPlugins` function should be your extension name
+## Load unpacked
 
-## Default Boilerplate Notes
+1. Open `chrome://extensions/`
+2. Enable **Developer mode**
+3. Click **Load unpacked**
+4. Select the `dist` folder
 
-- Folders get flattened, static references to images from HTML do not need to be relative (i.e. `icon.png` instead of `../static/icon.png`)
-- Importing local ts/tsx/css files should be relative, since Webpack will build a dependancy graph using these paths
-- Update the manifest file as per usual for chrome related permissions, references to files in here should also be flattened and not be relative
+Shortcut: **Alt+Shift+C** opens the popup (`_execute_action`).
+
+## Production build
+
+```bash
+npm run build
+```
+
+Zip the `dist` folder for Chrome Web Store upload.
+
+## Chrome Web Store checklist
+
+- Category: **Developer Tools** (or Art & Design)
+- Accurate listing description matching shipped features
+- Privacy tab: declare **no user data collected**
+- Provide icon (16/48/128), tile, marquee, and screenshots
+- Keep Manifest V3; do not add remote code or broad host access
+- Test EyeDropper, formats, history, palettes, image pick, and clear-data before submit
