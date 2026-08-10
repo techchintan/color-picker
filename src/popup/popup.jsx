@@ -157,7 +157,7 @@ const App = () => {
   return (
     <div className="app">
       <header className="brand">
-        <h1>Color Picker</h1>
+        <h1>WhatColor</h1>
         <span>HEX · Eyedropper</span>
       </header>
 

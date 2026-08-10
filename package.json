@@ -1,7 +1,7 @@
 {
-  "name": "color-picker",
+  "name": "whatcolor",
   "version": "1.0.0",
-  "description": "Cross-browser color picker extension (Chrome, Edge, Firefox, Safari) with eyedropper, HEX/RGB/HSL/CMYK, history, and palettes",
+  "description": "The fastest color picker and eyedropper tool for all designers. Instantly identify and copy HEX, RGB, and HSL color codes on any webpage.",
   "scripts": {
     "start": "node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --watch --progress --config webpack.dev.js",
     "build": "node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --progress --config webpack.prod.js",

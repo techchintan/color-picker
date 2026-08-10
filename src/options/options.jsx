@@ -59,7 +59,7 @@ const App = () => {
       <header className="header">
         <img src="icons/icon-128.png" alt="" width={48} height={48} />
         <div>
-          <h1>Color Picker</h1>
+          <h1>WhatColor</h1>
           <p>Settings stay on this device. Nothing is sent to a server.</p>
         </div>
       </header>
@@ -128,7 +128,7 @@ const App = () => {
       <section className="section privacy">
         <h2>Privacy</h2>
         <p>
-          Color Picker does not collect, store, or transmit personal data. Picked colors
+          WhatColor does not collect, store, or transmit personal data. Picked colors
           never leave your browser. Works in Chrome, Edge, Firefox, Brave, Opera, and Safari
           (as a Web Extension).
         </p>

@@ -1,4 +1,4 @@
-# Color Picker HEX | Eyedropper
+# WhatColor - Color Picker & Eyedropper
 
 Privacy-first Chrome extension to pick colors from any screen or uploaded image, convert HEX / RGB / HSL / CMYK, copy in one click, and save history plus named palettes locally.
 

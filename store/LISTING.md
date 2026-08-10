@@ -5,10 +5,10 @@ Use these fields in the [Chrome Web Store Developer Dashboard](https://chrome.go
 ## Product details
 
 **Name**  
-Color Picker HEX | Eyedropper
+WhatColor - Color Picker & Eyedropper
 
 **Summary** (short description, keep under ~132 characters)  
-Pick colors from any webpage or image. Convert HEX, RGB, HSL, and CMYK. Save history and palettes locally.
+The fastest color picker and eyedropper tool for all designers. Instantly identify and copy HEX, RGB, and HSL color codes on any webpage.
 
 **Category**  
 Developer Tools  
@@ -20,7 +20,7 @@ English
 ## Detailed description
 
 ```text
-Color Picker HEX | Eyedropper is a fast, privacy-first color tool for designers and developers.
+WhatColor - Color Picker & Eyedropper is a fast, privacy-first color tool for designers and developers.
 
 Pick any on-screen color with the native eyedropper, convert between HEX, RGB, HSL, and CMYK, and copy the format you need in one click. Save recent colors and named palettes locally — nothing is sent to a server.
 
