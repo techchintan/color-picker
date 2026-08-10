@@ -41,8 +41,11 @@ module.exports = {
         {
           from: path.resolve('src/static'),
           to: path.resolve('dist'),
-        }
-      ]
+          globOptions: {
+            ignore: ['**/manifest.firefox.json'],
+          },
+        },
+      ],
     }),
     ...getHtmlPlugins([
       'popup',

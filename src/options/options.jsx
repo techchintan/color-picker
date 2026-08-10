@@ -111,7 +111,7 @@ const App = () => {
 
       <section className="section">
         <h2>Local data</h2>
-        <p>Color history and palettes are stored with chrome.storage.local only.</p>
+        <p>Color history and palettes are stored with browser local storage only.</p>
         <div className="actions">
           <button type="button" className="btn btn-ghost" onClick={handleClearHistory}>
             Clear history
@@ -129,12 +129,13 @@ const App = () => {
         <h2>Privacy</h2>
         <p>
           Color Picker does not collect, store, or transmit personal data. Picked colors
-          never leave your browser.
+          never leave your browser. Works in Chrome, Edge, Firefox, Brave, Opera, and Safari
+          (as a Web Extension).
         </p>
         <ul>
           <li>No analytics or advertising</li>
           <li>No network requests for core features</li>
-          <li>Only the storage permission is used</li>
+          <li>Only local storage (and clipboard write on Firefox) is used</li>
           <li>No content scripts injected into websites</li>
         </ul>
       </section>

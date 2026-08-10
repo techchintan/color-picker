@@ -16,6 +16,8 @@ import {
   removeColorFromPalette,
   renamePalette,
 } from '../lib/storage';
+import { openExtensionPage, openOptionsPage } from '../lib/browser-api';
+import { writeClipboard } from '../lib/clipboard';
 import { applyTheme } from '../lib/theme';
 import './popup.css';
 
@@ -71,12 +73,8 @@ const App = () => {
   };
 
   const copyText = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      showToast('Copied');
-    } catch {
-      showToast('Copy failed');
-    }
+    const ok = await writeClipboard(text);
+    showToast(ok ? 'Copied' : 'Copy failed');
   };
 
   const selectColor = async (hex, { persistHistory = true, copyPreferred = true } = {}) => {
@@ -149,11 +147,11 @@ const App = () => {
   };
 
   const openImagePage = () => {
-    chrome.tabs.create({ url: chrome.runtime.getURL('image.html') });
+    openExtensionPage('image.html');
   };
 
   const openGradientPage = () => {
-    chrome.tabs.create({ url: chrome.runtime.getURL('gradient.html') });
+    openExtensionPage('gradient.html');
   };
 
   return (
@@ -362,7 +360,7 @@ const App = () => {
         <button
           type="button"
           className="footer-link"
-          onClick={() => chrome.runtime.openOptionsPage()}
+          onClick={() => openOptionsPage()}
         >
           Settings & privacy
         </button>

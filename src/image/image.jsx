@@ -8,6 +8,7 @@ import {
   rgbToHex,
 } from '../lib/color';
 import { addToHistory, getAllState } from '../lib/storage';
+import { writeClipboard } from '../lib/clipboard';
 import { applyTheme } from '../lib/theme';
 import './image.css';
 
@@ -51,12 +52,8 @@ const App = () => {
   };
 
   const copyText = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      flash('Copied');
-    } catch {
-      flash('Copy failed');
-    }
+    const ok = await writeClipboard(text);
+    flash(ok ? 'Copied' : 'Copy failed');
   };
 
   const selectColor = async (hex) => {

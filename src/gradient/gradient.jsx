@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { contrastTextColor, parseHex } from '../lib/color';
+import { writeClipboard } from '../lib/clipboard';
 import { getAllState } from '../lib/storage';
 import { applyTheme } from '../lib/theme';
 import './gradient.css';
@@ -118,12 +119,8 @@ const App = () => {
   };
 
   const copyText = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      flash('CSS copied');
-    } catch {
-      flash('Copy failed');
-    }
+    const ok = await writeClipboard(text);
+    flash(ok ? 'CSS copied' : 'Copy failed');
   };
 
   const updateStop = (id, partial) => {

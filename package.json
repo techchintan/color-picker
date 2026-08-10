@@ -1,10 +1,12 @@
 {
   "name": "color-picker",
   "version": "1.0.0",
-  "description": "Chrome color picker extension with eyedropper, HEX/RGB/HSL/CMYK conversion, history, and palettes",
+  "description": "Cross-browser color picker extension (Chrome, Edge, Firefox, Safari) with eyedropper, HEX/RGB/HSL/CMYK, history, and palettes",
   "scripts": {
     "start": "node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --watch --progress --config webpack.dev.js",
-    "build": "node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --progress --config webpack.prod.js"
+    "build": "node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --progress --config webpack.prod.js",
+    "build:firefox": "npm run build && node scripts/package-firefox.js",
+    "build:all": "npm run build:firefox"
   },
   "author": "",
   "devDependencies": {

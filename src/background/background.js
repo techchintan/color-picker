@@ -1,9 +1,10 @@
+import { onInstalled, onStartup } from '../lib/browser-api';
 import { ensureDefaults } from '../lib/storage';
 
-chrome.runtime.onInstalled.addListener(async () => {
+onInstalled(async () => {
   await ensureDefaults();
 });
 
-chrome.runtime.onStartup.addListener(async () => {
+onStartup(async () => {
   await ensureDefaults();
 });
