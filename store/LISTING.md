@@ -8,7 +8,7 @@ Use these fields in the [Chrome Web Store Developer Dashboard](https://chrome.go
 WhatColor - Color Picker & Eyedropper
 
 **Summary** (short description, keep under ~132 characters)  
-The fastest color picker and eyedropper tool for all designers. Instantly identify and copy HEX, RGB, and HSL color codes on any webpage.
+The fastest color picker and eyedropper for designers. Instantly identify and copy HEX, RGB, and HSL codes on any webpage.
 
 **Category**  
 Developer Tools  
