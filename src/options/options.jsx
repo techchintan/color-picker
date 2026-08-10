@@ -57,7 +57,7 @@ const App = () => {
   return (
     <div className="page">
       <header className="header">
-        <img src="icon.png" alt="" />
+        <img src="icons/icon-128.png" alt="" width={48} height={48} />
         <div>
           <h1>Color Picker</h1>
           <p>Settings stay on this device. Nothing is sent to a server.</p>
@@ -138,6 +138,11 @@ const App = () => {
           <li>Only local storage (and clipboard write on Firefox) is used</li>
           <li>No content scripts injected into websites</li>
         </ul>
+        <p>
+          <a href="privacy-policy.html" target="_blank" rel="noreferrer">
+            Full privacy policy
+          </a>
+        </p>
       </section>
     </div>
   );

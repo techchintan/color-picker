@@ -5,8 +5,9 @@
   "scripts": {
     "start": "node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --watch --progress --config webpack.dev.js",
     "build": "node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --progress --config webpack.prod.js",
+    "build:chrome": "npm run build && node scripts/package-chrome.js",
     "build:firefox": "npm run build && node scripts/package-firefox.js",
-    "build:all": "npm run build:firefox"
+    "build:all": "npm run build:chrome && node scripts/package-firefox.js"
   },
   "author": "",
   "devDependencies": {

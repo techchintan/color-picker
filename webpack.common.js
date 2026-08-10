@@ -45,6 +45,10 @@ module.exports = {
             ignore: ['**/manifest.firefox.json'],
           },
         },
+        {
+          from: path.resolve('store/privacy-policy.html'),
+          to: path.resolve('dist/privacy-policy.html'),
+        },
       ],
     }),
     ...getHtmlPlugins([

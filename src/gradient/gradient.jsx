@@ -202,7 +202,7 @@ const App = () => {
   return (
     <div className="page">
       <header className="header">
-        <img src="icon.png" alt="" />
+        <img src="icons/icon-128.png" alt="" width={48} height={48} />
         <div>
           <h1>Gradient maker</h1>
           <p>Build linear or radial gradients, then copy ready-to-use CSS.</p>

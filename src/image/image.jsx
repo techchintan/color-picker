@@ -117,7 +117,7 @@ const App = () => {
   return (
     <div className="page">
       <header className="header">
-        <img src="icon.png" alt="" />
+        <img src="icons/icon-128.png" alt="" width={48} height={48} />
         <div>
           <h1>Pick from image</h1>
           <p>Upload a local image and click any pixel to sample its color.</p>

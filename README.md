@@ -39,13 +39,40 @@ Shortcut: **Alt+Shift+C** opens the popup (`_execute_action`).
 npm run build
 ```
 
-Zip the `dist` folder for Chrome Web Store upload.
+Chrome Web Store ZIP:
 
-## Chrome Web Store checklist
+```bash
+npm run build:chrome
+```
 
-- Category: **Developer Tools** (or Art & Design)
-- Accurate listing description matching shipped features
-- Privacy tab: declare **no user data collected**
-- Provide icon (16/48/128), tile, marquee, and screenshots
-- Keep Manifest V3; do not add remote code or broad host access
-- Test EyeDropper, formats, history, palettes, image pick, and clear-data before submit
+Creates `dist-chrome.zip` for upload.
+
+Firefox package:
+
+```bash
+npm run build:firefox
+```
+
+## Chrome Web Store upload
+
+Store-ready files live in `store/`:
+
+| Item | Location |
+|---|---|
+| Listing copy + Privacy tab answers | [`store/LISTING.md`](store/LISTING.md) |
+| Privacy policy (host this on HTTPS) | [`store/privacy-policy.html`](store/privacy-policy.html) |
+| Store icon / tile / marquee / screenshots | [`store/assets/`](store/assets/) |
+
+### Steps
+
+1. Run `npm run build:chrome`
+2. Host `store/privacy-policy.html` on a public HTTPS URL (GitHub Pages, your site, etc.)
+3. In the [Developer Dashboard](https://chrome.google.com/webstore/devconsole):
+   - Upload `dist-chrome.zip`
+   - Paste text from `store/LISTING.md`
+   - Upload images from `store/assets/`
+   - Fill Privacy practices using the answers in `store/LISTING.md`
+   - Set the privacy policy URL to your hosted page
+4. Submit for review
+
+Recommended category: **Developer Tools** (or Art & Design).
