@@ -222,19 +222,19 @@
     "description": "Privacy section heading."
   },
   "privacyBody": {
-    "message": "WhatColor 不会出售个人数据。选取的颜色保留在您的浏览器中。匿名使用分析（页面打开与安装事件）可能会通过 Google Analytics 发送。支持 Chrome、Edge、Firefox、Brave、Opera 以及 Safari（作为 Web 扩展）。",
+    "message": "WhatColor 不会收集、存储或传输个人数据。选取的颜色不会离开您的浏览器。支持 Chrome、Edge、Firefox、Brave、Opera 以及 Safari（作为 Web 扩展）。",
     "description": "Privacy section body."
   },
   "privacyAnalytics": {
-    "message": "通过 Google Analytics（Measurement Protocol）进行使用分析",
+    "message": "无分析或广告",
     "description": "Privacy bullet."
   },
   "privacyNoAds": {
-    "message": "无广告网络",
+    "message": "核心功能不发起网络请求",
     "description": "Privacy bullet."
   },
   "privacyLocalStorage": {
-    "message": "颜色历史和调色板保留在本地存储",
+    "message": "仅使用本地存储（Firefox 上还会写入剪贴板）",
     "description": "Privacy bullet."
   },
   "privacyNoContentScripts": {

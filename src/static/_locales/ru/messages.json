@@ -222,19 +222,19 @@
     "description": "Privacy section heading."
   },
   "privacyBody": {
-    "message": "WhatColor не продаёт персональные данные. Выбранные цвета остаются в браузере. Анонимная аналитика использования (открытия страниц и установки) может отправляться через Google Analytics. Работает в Chrome, Edge, Firefox, Brave, Opera и Safari (как веб-расширение).",
+    "message": "WhatColor не собирает, не хранит и не передаёт персональные данные. Выбранные цвета никогда не покидают браузер. Работает в Chrome, Edge, Firefox, Brave, Opera и Safari (как веб-расширение).",
     "description": "Privacy section body."
   },
   "privacyAnalytics": {
-    "message": "Аналитика использования через Google Analytics (Measurement Protocol)",
+    "message": "Без аналитики и рекламы",
     "description": "Privacy bullet."
   },
   "privacyNoAds": {
-    "message": "Нет рекламных сетей",
+    "message": "Нет сетевых запросов для основных функций",
     "description": "Privacy bullet."
   },
   "privacyLocalStorage": {
-    "message": "История и палитры остаются в локальном хранилище",
+    "message": "Только локальное хранилище (и запись в буфер обмена в Firefox)",
     "description": "Privacy bullet."
   },
   "privacyNoContentScripts": {

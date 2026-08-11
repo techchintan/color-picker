@@ -3,4 +3,3 @@ dist
 dist-firefox
 dist-chrome-*.zip
 dist-firefox-*.zip
-src/lib/analytics-config.js

@@ -222,19 +222,19 @@
     "description": "Privacy section heading."
   },
   "privacyBody": {
-    "message": "WhatColor व्यक्तिगत डेटा नहीं बेचता। चुने गए रंग आपके ब्राउज़र में रहते हैं। अनाम उपयोग विश्लेषण (पेज खोलना और इंस्टॉल इवेंट) Google Analytics के माध्यम से भेजे जा सकते हैं। Chrome, Edge, Firefox, Brave, Opera और Safari (वेब एक्सटेंशन के रूप में) में काम करता है।",
+    "message": "WhatColor व्यक्तिगत डेटा एकत्र, संग्रहीत या प्रसारित नहीं करता। चुने गए रंग आपके ब्राउज़र से बाहर नहीं जाते। Chrome, Edge, Firefox, Brave, Opera और Safari (वेब एक्सटेंशन के रूप में) में काम करता है।",
     "description": "Privacy section body."
   },
   "privacyAnalytics": {
-    "message": "Google Analytics (Measurement Protocol) के माध्यम से उपयोग विश्लेषण",
+    "message": "कोई एनालिटिक्स या विज्ञापन नहीं",
     "description": "Privacy bullet."
   },
   "privacyNoAds": {
-    "message": "कोई विज्ञापन नेटवर्क नहीं",
+    "message": "मुख्य सुविधाओं के लिए कोई नेटवर्क अनुरोध नहीं",
     "description": "Privacy bullet."
   },
   "privacyLocalStorage": {
-    "message": "रंग इतिहास और पैलेट लोकल स्टोरेज में रहते हैं",
+    "message": "केवल स्थानीय स्टोरेज (और Firefox पर क्लिपबोर्ड लेखन)",
     "description": "Privacy bullet."
   },
   "privacyNoContentScripts": {

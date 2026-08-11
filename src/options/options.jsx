@@ -9,7 +9,6 @@ import {
   saveSettings,
 } from '../lib/storage';
 import { applyTheme } from '../lib/theme';
-import { trackPageView } from '../lib/analytics';
 import { applyDocumentLocale, t } from '../lib/i18n';
 import './options.css';
 
@@ -25,7 +24,6 @@ const App = () => {
       setSettings(state.settings);
       setCurrentColor(state.currentColor);
     });
-    trackPageView('options');
   }, []);
 
   useEffect(() => {

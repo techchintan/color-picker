@@ -10,7 +10,6 @@ import {
 import { addToHistory, getAllState } from '../lib/storage';
 import { writeClipboard } from '../lib/clipboard';
 import { applyTheme } from '../lib/theme';
-import { trackPageView } from '../lib/analytics';
 import { applyDocumentLocale, t } from '../lib/i18n';
 import './image.css';
 
@@ -43,7 +42,6 @@ const App = () => {
       setCurrentColor(state.currentColor);
       setSettings(state.settings);
     });
-    trackPageView('image');
   }, []);
 
   useEffect(() => {

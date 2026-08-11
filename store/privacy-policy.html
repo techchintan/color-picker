@@ -83,23 +83,11 @@
 
         <h2>Summary</h2>
         <ul>
-          <li>We do <strong>not</strong> sell personal information.</li>
-          <li>Picked colors and palettes are <strong>not</strong> uploaded to our servers.</li>
-          <li>
-            The Extension may send <strong>anonymous usage analytics</strong> (for example page
-            opens and install/update events) to Google Analytics using the Measurement Protocol.
-          </li>
+          <li>We do <strong>not</strong> collect personal information.</li>
+          <li>We do <strong>not</strong> use analytics, advertising, or tracking.</li>
+          <li>We do <strong>not</strong> send picked colors or settings to a server.</li>
           <li>Color history, palettes, and preferences stay in your browser’s local storage.</li>
         </ul>
-
-        <h2>Analytics</h2>
-        <p>
-          To understand feature usage, the Extension may send anonymous events to Google Analytics
-          (property measurement ID used by the developer). Events can include which Extension page
-          was opened (popup, options, image picker, gradient maker) and install/update signals.
-          Events use a random client identifier stored locally; they do not include picked color
-          values, palette names, or webpage content you browse.
-        </p>
 
         <h2>Data the Extension stores locally</h2>
         <p>
@@ -111,7 +99,6 @@
           <li>Recent color history</li>
           <li>Named palettes you create</li>
           <li>Settings such as preferred color format, auto-copy, and history limit</li>
-          <li>Anonymous analytics client/session identifiers used only for usage measurement</li>
         </ul>
         <p>
           This data never leaves your browser for Extension functionality. It is not sold,
@@ -121,20 +108,17 @@
         <h2>Permissions</h2>
         <ul>
           <li>
-            <strong>storage</strong> — required to save history, palettes, settings, and local
-            analytics identifiers on your device.
+            <strong>storage</strong> — required to save history, palettes, and settings on
+            your device.
           </li>
           <li>
             On Firefox, <strong>clipboardWrite</strong> may be used so one-click copy works
             reliably.
           </li>
-          <li>
-            Host access to <strong>www.google-analytics.com</strong> — used only to send anonymous
-            usage events via the Google Analytics Measurement Protocol.
-          </li>
         </ul>
         <p>
-          The Extension does not inject content scripts into websites.
+          The Extension does not request host permissions and does not inject content scripts
+          into websites.
         </p>
 
         <h2>Clipboard</h2>

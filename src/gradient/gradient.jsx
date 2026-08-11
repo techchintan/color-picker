@@ -4,7 +4,6 @@ import { contrastTextColor, parseHex } from '../lib/color';
 import { writeClipboard } from '../lib/clipboard';
 import { getAllState } from '../lib/storage';
 import { applyTheme } from '../lib/theme';
-import { trackPageView } from '../lib/analytics';
 import { applyDocumentLocale, t } from '../lib/i18n';
 import './gradient.css';
 
@@ -110,7 +109,6 @@ const App = () => {
     applyDocumentLocale();
     document.title = t('gradientMaker');
     getAllState().then((state) => applyTheme(state.currentColor));
-    trackPageView('gradient');
   }, []);
 
   useEffect(() => {

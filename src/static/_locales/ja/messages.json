@@ -222,19 +222,19 @@
     "description": "Privacy section heading."
   },
   "privacyBody": {
-    "message": "WhatColor は個人データを販売しません。取得した色はブラウザ内に残ります。匿名の利用状況分析（ページ表示とインストール）は Google Analytics 経由で送信される場合があります。Chrome、Edge、Firefox、Brave、Opera、Safari（Web 拡張機能）で動作します。",
+    "message": "WhatColor は個人データを収集・保存・送信しません。取得した色はブラウザから外部に出ません。Chrome、Edge、Firefox、Brave、Opera、Safari（Web 拡張機能）で動作します。",
     "description": "Privacy section body."
   },
   "privacyAnalytics": {
-    "message": "Google Analytics（Measurement Protocol）による利用状況分析",
+    "message": "分析や広告はありません",
     "description": "Privacy bullet."
   },
   "privacyNoAds": {
-    "message": "広告ネットワークなし",
+    "message": "主要機能のためのネットワーク通信はありません",
     "description": "Privacy bullet."
   },
   "privacyLocalStorage": {
-    "message": "色の履歴とパレットはローカルストレージに保存",
+    "message": "ローカルストレージのみ（Firefox ではクリップボード書き込みも使用）",
     "description": "Privacy bullet."
   },
   "privacyNoContentScripts": {
