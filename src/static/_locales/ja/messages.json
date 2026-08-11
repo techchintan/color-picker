@@ -1,0 +1,450 @@
+{
+  "extName": {
+    "message": "WhatColor - カラーピッカー＆スポイト",
+    "description": "Extension name shown in the store and browser UI."
+  },
+  "extDescription": {
+    "message": "デザイナー向けの最速カラーピッカー＆スポイト。どのウェブページでも HEX・RGB・HSL コードをすぐに特定してコピーできます。",
+    "description": "Extension description for the store and browser."
+  },
+  "actionTitle": {
+    "message": "WhatColor",
+    "description": "Toolbar button tooltip."
+  },
+  "commandOpenDescription": {
+    "message": "WhatColor を開く",
+    "description": "Keyboard command description."
+  },
+  "appName": {
+    "message": "WhatColor",
+    "description": "Product name in UI headers."
+  },
+  "brandTagline": {
+    "message": "HEX · スポイト",
+    "description": "Short brand tagline under the product name."
+  },
+  "copy": {
+    "message": "コピー",
+    "description": "Copy button label."
+  },
+  "copied": {
+    "message": "コピーしました",
+    "description": "Toast when clipboard write succeeds."
+  },
+  "copyFailed": {
+    "message": "コピーに失敗しました",
+    "description": "Toast when clipboard write fails."
+  },
+  "clear": {
+    "message": "クリア",
+    "description": "Clear history button."
+  },
+  "add": {
+    "message": "追加",
+    "description": "Add palette button."
+  },
+  "save": {
+    "message": "保存",
+    "description": "Save rename button."
+  },
+  "delete": {
+    "message": "削除",
+    "description": "Delete palette button."
+  },
+  "rename": {
+    "message": "名前変更",
+    "description": "Rename palette button."
+  },
+  "untitled": {
+    "message": "無題",
+    "description": "Default name for a new palette."
+  },
+  "tabHistory": {
+    "message": "履歴",
+    "description": "Popup History tab."
+  },
+  "tabPalettes": {
+    "message": "パレット",
+    "description": "Popup Palettes tab."
+  },
+  "eyedropper": {
+    "message": "スポイト",
+    "description": "Eyedropper button label."
+  },
+  "picking": {
+    "message": "選択中…",
+    "description": "Eyedropper button while active."
+  },
+  "eyedropperUnsupported": {
+    "message": "このブラウザでは EyeDropper がサポートされていません。",
+    "description": "Hint when EyeDropper API is missing."
+  },
+  "colorToolsAria": {
+    "message": "カラーツール",
+    "description": "Aria label for popup tabs."
+  },
+  "recentColors": {
+    "message": "最近の色",
+    "description": "History panel heading."
+  },
+  "historyEmpty": {
+    "message": "色を選んで履歴を始めましょう。",
+    "description": "Empty history state."
+  },
+  "historyCleared": {
+    "message": "履歴をクリアしました",
+    "description": "Toast after clearing history."
+  },
+  "newPalettePlaceholder": {
+    "message": "新しいパレット名",
+    "description": "Create palette input placeholder."
+  },
+  "paletteCreated": {
+    "message": "パレットを作成しました",
+    "description": "Toast after creating a palette."
+  },
+  "paletteDeleted": {
+    "message": "パレットを削除しました",
+    "description": "Toast after deleting a palette."
+  },
+  "addedToPalette": {
+    "message": "パレットに追加しました",
+    "description": "Toast after adding a color to a palette."
+  },
+  "addColor": {
+    "message": "+ 色",
+    "description": "Add current color to palette."
+  },
+  "paletteEmpty": {
+    "message": "まだ色がありません。現在のスウォッチを追加してください。",
+    "description": "Empty palette colors state."
+  },
+  "noPalettes": {
+    "message": "パレットを作成してプロジェクトの色をまとめましょう。",
+    "description": "Empty palettes list."
+  },
+  "removeColorHint": {
+    "message": "$COLOR$（右クリックで削除）",
+    "description": "Title on palette swatches.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "pickFromImage": {
+    "message": "画像から選ぶ",
+    "description": "Footer link to image picker."
+  },
+  "gradientMaker": {
+    "message": "グラデーションメーカー",
+    "description": "Footer link / page title for gradient tool."
+  },
+  "settingsPrivacy": {
+    "message": "設定とプライバシー",
+    "description": "Footer link to options."
+  },
+  "currentColorAria": {
+    "message": "現在の色 $COLOR$",
+    "description": "Aria label for current swatch.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "selectColorAria": {
+    "message": "$COLOR$ を選択",
+    "description": "Aria label for selectable swatches.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "optionsSubtitle": {
+    "message": "設定はこの端末にのみ保存されます。サーバーには送信されません。",
+    "description": "Options page subtitle."
+  },
+  "defaultsTitle": {
+    "message": "デフォルト",
+    "description": "Defaults section heading."
+  },
+  "defaultsDesc": {
+    "message": "色を選んだときにコピーする形式を選択します。",
+    "description": "Defaults section description."
+  },
+  "preferredFormat": {
+    "message": "優先フォーマット",
+    "description": "Preferred format label."
+  },
+  "historyLimit": {
+    "message": "履歴の上限",
+    "description": "History limit label."
+  },
+  "autoCopy": {
+    "message": "選択後に優先フォーマットを自動コピー",
+    "description": "Auto-copy checkbox label."
+  },
+  "localDataTitle": {
+    "message": "ローカルデータ",
+    "description": "Local data section heading."
+  },
+  "localDataDesc": {
+    "message": "色の履歴とパレットはブラウザのローカルストレージのみに保存されます。",
+    "description": "Local data section description."
+  },
+  "clearHistory": {
+    "message": "履歴をクリア",
+    "description": "Clear history button on options."
+  },
+  "clearAllData": {
+    "message": "すべてのデータをクリア",
+    "description": "Clear all data button."
+  },
+  "clearAllConfirm": {
+    "message": "すべてのローカルカラーデータをクリアしますか？履歴・パレット・設定がリセットされます。",
+    "description": "Confirm dialog for clear all."
+  },
+  "settingsSaved": {
+    "message": "設定を保存しました",
+    "description": "Status after saving settings."
+  },
+  "allDataCleared": {
+    "message": "すべてのローカルデータをクリアしました",
+    "description": "Status after clearing all data."
+  },
+  "privacyTitle": {
+    "message": "プライバシー",
+    "description": "Privacy section heading."
+  },
+  "privacyBody": {
+    "message": "WhatColor は個人データを販売しません。取得した色はブラウザ内に残ります。匿名の利用状況分析（ページ表示とインストール）は Google Analytics 経由で送信される場合があります。Chrome、Edge、Firefox、Brave、Opera、Safari（Web 拡張機能）で動作します。",
+    "description": "Privacy section body."
+  },
+  "privacyAnalytics": {
+    "message": "Google Analytics（Measurement Protocol）による利用状況分析",
+    "description": "Privacy bullet."
+  },
+  "privacyNoAds": {
+    "message": "広告ネットワークなし",
+    "description": "Privacy bullet."
+  },
+  "privacyLocalStorage": {
+    "message": "色の履歴とパレットはローカルストレージに保存",
+    "description": "Privacy bullet."
+  },
+  "privacyNoContentScripts": {
+    "message": "ウェブサイトへのコンテンツスクリプト注入なし",
+    "description": "Privacy bullet."
+  },
+  "fullPrivacyPolicy": {
+    "message": "プライバシーポリシー全文",
+    "description": "Link to privacy policy."
+  },
+  "imageTitle": {
+    "message": "画像から選ぶ",
+    "description": "Image picker page title."
+  },
+  "imageSubtitle": {
+    "message": "ローカル画像をアップロードし、任意のピクセルをクリックして色を取得します。",
+    "description": "Image picker subtitle."
+  },
+  "imageSection": {
+    "message": "画像",
+    "description": "Image section heading."
+  },
+  "imageSectionDesc": {
+    "message": "PNG、JPG、WebP に対応。色はこの端末にのみ残ります。",
+    "description": "Image section description."
+  },
+  "uploadImage": {
+    "message": "画像をアップロード",
+    "description": "Upload image button."
+  },
+  "canvasEmpty": {
+    "message": "画像をアップロードして色の選択を開始します。",
+    "description": "Empty canvas placeholder."
+  },
+  "hintLoaded": {
+    "message": "画像上の任意のピクセルをクリックして色を取得します。",
+    "description": "Hint when image is loaded."
+  },
+  "hintEmpty": {
+    "message": "上でファイルを選び、プレビューをクリックして選択します。",
+    "description": "Hint when no image is loaded."
+  },
+  "selectedColor": {
+    "message": "選択した色",
+    "description": "Selected color section heading."
+  },
+  "colorPicked": {
+    "message": "色を取得しました",
+    "description": "Status when color is picked without auto-copy."
+  },
+  "imageLoaded": {
+    "message": "画像を読み込みました",
+    "description": "Status after image upload."
+  },
+  "gradientSubtitle": {
+    "message": "線形または放射状のグラデーションを作成し、すぐ使える CSS をコピーします。",
+    "description": "Gradient page subtitle."
+  },
+  "previewTitle": {
+    "message": "プレビュー",
+    "description": "Preview section heading."
+  },
+  "previewDesc": {
+    "message": "ストップバーをクリックして色を追加。ハンドルをドラッグして位置を変更。",
+    "description": "Preview section description."
+  },
+  "gradientTypeAria": {
+    "message": "グラデーションの種類",
+    "description": "Aria label for gradient type control."
+  },
+  "linear": {
+    "message": "線形",
+    "description": "Linear gradient mode."
+  },
+  "radial": {
+    "message": "放射状",
+    "description": "Radial gradient mode."
+  },
+  "angleLabel": {
+    "message": "角度 $ANGLE$°",
+    "description": "Angle slider label.",
+    "placeholders": {
+      "angle": {
+        "content": "$1",
+        "example": "90"
+      }
+    }
+  },
+  "stopsTitle": {
+    "message": "ストップ",
+    "description": "Stops section heading."
+  },
+  "stopsDesc": {
+    "message": "アクティブなストップの色と位置を編集します。",
+    "description": "Stops section description."
+  },
+  "addStop": {
+    "message": "ストップを追加",
+    "description": "Add stop button."
+  },
+  "colorLabel": {
+    "message": "色",
+    "description": "Color field label."
+  },
+  "stopColorPickerAria": {
+    "message": "ストップのカラーピッカー",
+    "description": "Aria label for stop color input."
+  },
+  "positionLabel": {
+    "message": "位置 $POSITION$%",
+    "description": "Position slider label.",
+    "placeholders": {
+      "position": {
+        "content": "$1",
+        "example": "50"
+      }
+    }
+  },
+  "removeStop": {
+    "message": "ストップを削除",
+    "description": "Remove stop button."
+  },
+  "presetsTitle": {
+    "message": "プリセット",
+    "description": "Presets section heading."
+  },
+  "presetsDesc": {
+    "message": "用意されたブレンドから始め、ストップを調整します。",
+    "description": "Presets section description."
+  },
+  "cssTitle": {
+    "message": "CSS",
+    "description": "CSS section heading."
+  },
+  "cssDesc": {
+    "message": "スタイルシートにコピー＆ペーストできます。",
+    "description": "CSS section description."
+  },
+  "copyCss": {
+    "message": "CSS をコピー",
+    "description": "Copy CSS button."
+  },
+  "cssCopied": {
+    "message": "CSS をコピーしました",
+    "description": "Status after copying CSS."
+  },
+  "keepTwoStops": {
+    "message": "ストップは少なくとも 2 つ必要です",
+    "description": "Error when removing last stops."
+  },
+  "presetApplied": {
+    "message": "$NAME$ を適用しました",
+    "description": "Status after applying a preset.",
+    "placeholders": {
+      "name": {
+        "content": "$1",
+        "example": "Ocean"
+      }
+    }
+  },
+  "stopAria": {
+    "message": "ストップ $COLOR$（$POSITION$%）",
+    "description": "Aria label for a gradient stop handle.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#0E8F6F"
+      },
+      "position": {
+        "content": "$2",
+        "example": "0"
+      }
+    }
+  },
+  "stopTitle": {
+    "message": "$COLOR$ · $POSITION$%",
+    "description": "Title tooltip for a gradient stop.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#0E8F6F"
+      },
+      "position": {
+        "content": "$2",
+        "example": "0"
+      }
+    }
+  },
+  "presetOcean": {
+    "message": "オーシャン",
+    "description": "Gradient preset name."
+  },
+  "presetSunset": {
+    "message": "サンセット",
+    "description": "Gradient preset name."
+  },
+  "presetForest": {
+    "message": "フォレスト",
+    "description": "Gradient preset name."
+  },
+  "presetAurora": {
+    "message": "オーロラ",
+    "description": "Gradient preset name."
+  },
+  "presetBerry": {
+    "message": "ベリー",
+    "description": "Gradient preset name."
+  },
+  "presetSky": {
+    "message": "スカイ",
+    "description": "Gradient preset name."
+  }
+}

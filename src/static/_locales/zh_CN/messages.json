@@ -1,0 +1,450 @@
+{
+  "extName": {
+    "message": "WhatColor - 取色器与吸管",
+    "description": "Extension name shown in the store and browser UI."
+  },
+  "extDescription": {
+    "message": "面向设计师的最快取色器与吸管。在任意网页上即时识别并复制 HEX、RGB 和 HSL 色值。",
+    "description": "Extension description for the store and browser."
+  },
+  "actionTitle": {
+    "message": "WhatColor",
+    "description": "Toolbar button tooltip."
+  },
+  "commandOpenDescription": {
+    "message": "打开 WhatColor",
+    "description": "Keyboard command description."
+  },
+  "appName": {
+    "message": "WhatColor",
+    "description": "Product name in UI headers."
+  },
+  "brandTagline": {
+    "message": "HEX · 吸管",
+    "description": "Short brand tagline under the product name."
+  },
+  "copy": {
+    "message": "复制",
+    "description": "Copy button label."
+  },
+  "copied": {
+    "message": "已复制",
+    "description": "Toast when clipboard write succeeds."
+  },
+  "copyFailed": {
+    "message": "复制失败",
+    "description": "Toast when clipboard write fails."
+  },
+  "clear": {
+    "message": "清除",
+    "description": "Clear history button."
+  },
+  "add": {
+    "message": "添加",
+    "description": "Add palette button."
+  },
+  "save": {
+    "message": "保存",
+    "description": "Save rename button."
+  },
+  "delete": {
+    "message": "删除",
+    "description": "Delete palette button."
+  },
+  "rename": {
+    "message": "重命名",
+    "description": "Rename palette button."
+  },
+  "untitled": {
+    "message": "未命名",
+    "description": "Default name for a new palette."
+  },
+  "tabHistory": {
+    "message": "历史",
+    "description": "Popup History tab."
+  },
+  "tabPalettes": {
+    "message": "调色板",
+    "description": "Popup Palettes tab."
+  },
+  "eyedropper": {
+    "message": "吸管",
+    "description": "Eyedropper button label."
+  },
+  "picking": {
+    "message": "取色中…",
+    "description": "Eyedropper button while active."
+  },
+  "eyedropperUnsupported": {
+    "message": "此浏览器不支持 EyeDropper。",
+    "description": "Hint when EyeDropper API is missing."
+  },
+  "colorToolsAria": {
+    "message": "颜色工具",
+    "description": "Aria label for popup tabs."
+  },
+  "recentColors": {
+    "message": "最近颜色",
+    "description": "History panel heading."
+  },
+  "historyEmpty": {
+    "message": "选取一种颜色以开始建立历史记录。",
+    "description": "Empty history state."
+  },
+  "historyCleared": {
+    "message": "历史已清除",
+    "description": "Toast after clearing history."
+  },
+  "newPalettePlaceholder": {
+    "message": "新调色板名称",
+    "description": "Create palette input placeholder."
+  },
+  "paletteCreated": {
+    "message": "已创建调色板",
+    "description": "Toast after creating a palette."
+  },
+  "paletteDeleted": {
+    "message": "已删除调色板",
+    "description": "Toast after deleting a palette."
+  },
+  "addedToPalette": {
+    "message": "已添加到调色板",
+    "description": "Toast after adding a color to a palette."
+  },
+  "addColor": {
+    "message": "+ 颜色",
+    "description": "Add current color to palette."
+  },
+  "paletteEmpty": {
+    "message": "还没有颜色。添加当前色样。",
+    "description": "Empty palette colors state."
+  },
+  "noPalettes": {
+    "message": "创建调色板以整理项目颜色。",
+    "description": "Empty palettes list."
+  },
+  "removeColorHint": {
+    "message": "$COLOR$（右键移除）",
+    "description": "Title on palette swatches.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "pickFromImage": {
+    "message": "从图片取色",
+    "description": "Footer link to image picker."
+  },
+  "gradientMaker": {
+    "message": "渐变生成器",
+    "description": "Footer link / page title for gradient tool."
+  },
+  "settingsPrivacy": {
+    "message": "设置与隐私",
+    "description": "Footer link to options."
+  },
+  "currentColorAria": {
+    "message": "当前颜色 $COLOR$",
+    "description": "Aria label for current swatch.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "selectColorAria": {
+    "message": "选择 $COLOR$",
+    "description": "Aria label for selectable swatches.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "optionsSubtitle": {
+    "message": "设置仅保存在本设备，不会发送到服务器。",
+    "description": "Options page subtitle."
+  },
+  "defaultsTitle": {
+    "message": "默认设置",
+    "description": "Defaults section heading."
+  },
+  "defaultsDesc": {
+    "message": "选择取色后复制颜色的格式。",
+    "description": "Defaults section description."
+  },
+  "preferredFormat": {
+    "message": "首选格式",
+    "description": "Preferred format label."
+  },
+  "historyLimit": {
+    "message": "历史条数上限",
+    "description": "History limit label."
+  },
+  "autoCopy": {
+    "message": "取色后自动复制首选格式",
+    "description": "Auto-copy checkbox label."
+  },
+  "localDataTitle": {
+    "message": "本地数据",
+    "description": "Local data section heading."
+  },
+  "localDataDesc": {
+    "message": "颜色历史和调色板仅存储在浏览器本地存储中。",
+    "description": "Local data section description."
+  },
+  "clearHistory": {
+    "message": "清除历史",
+    "description": "Clear history button on options."
+  },
+  "clearAllData": {
+    "message": "清除全部数据",
+    "description": "Clear all data button."
+  },
+  "clearAllConfirm": {
+    "message": "清除所有本地颜色数据？这将重置历史、调色板和设置。",
+    "description": "Confirm dialog for clear all."
+  },
+  "settingsSaved": {
+    "message": "设置已保存",
+    "description": "Status after saving settings."
+  },
+  "allDataCleared": {
+    "message": "所有本地数据已清除",
+    "description": "Status after clearing all data."
+  },
+  "privacyTitle": {
+    "message": "隐私",
+    "description": "Privacy section heading."
+  },
+  "privacyBody": {
+    "message": "WhatColor 不会出售个人数据。选取的颜色保留在您的浏览器中。匿名使用分析（页面打开与安装事件）可能会通过 Google Analytics 发送。支持 Chrome、Edge、Firefox、Brave、Opera 以及 Safari（作为 Web 扩展）。",
+    "description": "Privacy section body."
+  },
+  "privacyAnalytics": {
+    "message": "通过 Google Analytics（Measurement Protocol）进行使用分析",
+    "description": "Privacy bullet."
+  },
+  "privacyNoAds": {
+    "message": "无广告网络",
+    "description": "Privacy bullet."
+  },
+  "privacyLocalStorage": {
+    "message": "颜色历史和调色板保留在本地存储",
+    "description": "Privacy bullet."
+  },
+  "privacyNoContentScripts": {
+    "message": "不会向网站注入内容脚本",
+    "description": "Privacy bullet."
+  },
+  "fullPrivacyPolicy": {
+    "message": "完整隐私政策",
+    "description": "Link to privacy policy."
+  },
+  "imageTitle": {
+    "message": "从图片取色",
+    "description": "Image picker page title."
+  },
+  "imageSubtitle": {
+    "message": "上传本地图片，点击任意像素以采样颜色。",
+    "description": "Image picker subtitle."
+  },
+  "imageSection": {
+    "message": "图片",
+    "description": "Image section heading."
+  },
+  "imageSectionDesc": {
+    "message": "支持 PNG、JPG 或 WebP。颜色仅保留在本设备。",
+    "description": "Image section description."
+  },
+  "uploadImage": {
+    "message": "上传图片",
+    "description": "Upload image button."
+  },
+  "canvasEmpty": {
+    "message": "上传图片以开始取色。",
+    "description": "Empty canvas placeholder."
+  },
+  "hintLoaded": {
+    "message": "点击图片上的任意像素以采样颜色。",
+    "description": "Hint when image is loaded."
+  },
+  "hintEmpty": {
+    "message": "先在上方选择文件，再点击预览取色。",
+    "description": "Hint when no image is loaded."
+  },
+  "selectedColor": {
+    "message": "已选颜色",
+    "description": "Selected color section heading."
+  },
+  "colorPicked": {
+    "message": "已取色",
+    "description": "Status when color is picked without auto-copy."
+  },
+  "imageLoaded": {
+    "message": "图片已加载",
+    "description": "Status after image upload."
+  },
+  "gradientSubtitle": {
+    "message": "创建线性或径向渐变，然后复制可用的 CSS。",
+    "description": "Gradient page subtitle."
+  },
+  "previewTitle": {
+    "message": "预览",
+    "description": "Preview section heading."
+  },
+  "previewDesc": {
+    "message": "点击色标栏添加颜色。拖动手柄调整位置。",
+    "description": "Preview section description."
+  },
+  "gradientTypeAria": {
+    "message": "渐变类型",
+    "description": "Aria label for gradient type control."
+  },
+  "linear": {
+    "message": "线性",
+    "description": "Linear gradient mode."
+  },
+  "radial": {
+    "message": "径向",
+    "description": "Radial gradient mode."
+  },
+  "angleLabel": {
+    "message": "角度 $ANGLE$°",
+    "description": "Angle slider label.",
+    "placeholders": {
+      "angle": {
+        "content": "$1",
+        "example": "90"
+      }
+    }
+  },
+  "stopsTitle": {
+    "message": "色标",
+    "description": "Stops section heading."
+  },
+  "stopsDesc": {
+    "message": "编辑当前色标的颜色和位置。",
+    "description": "Stops section description."
+  },
+  "addStop": {
+    "message": "添加色标",
+    "description": "Add stop button."
+  },
+  "colorLabel": {
+    "message": "颜色",
+    "description": "Color field label."
+  },
+  "stopColorPickerAria": {
+    "message": "色标取色器",
+    "description": "Aria label for stop color input."
+  },
+  "positionLabel": {
+    "message": "位置 $POSITION$%",
+    "description": "Position slider label.",
+    "placeholders": {
+      "position": {
+        "content": "$1",
+        "example": "50"
+      }
+    }
+  },
+  "removeStop": {
+    "message": "移除色标",
+    "description": "Remove stop button."
+  },
+  "presetsTitle": {
+    "message": "预设",
+    "description": "Presets section heading."
+  },
+  "presetsDesc": {
+    "message": "从现成混合开始，再调整色标。",
+    "description": "Presets section description."
+  },
+  "cssTitle": {
+    "message": "CSS",
+    "description": "CSS section heading."
+  },
+  "cssDesc": {
+    "message": "复制并粘贴到样式表中。",
+    "description": "CSS section description."
+  },
+  "copyCss": {
+    "message": "复制 CSS",
+    "description": "Copy CSS button."
+  },
+  "cssCopied": {
+    "message": "已复制 CSS",
+    "description": "Status after copying CSS."
+  },
+  "keepTwoStops": {
+    "message": "至少保留 2 个色标",
+    "description": "Error when removing last stops."
+  },
+  "presetApplied": {
+    "message": "已应用 $NAME$",
+    "description": "Status after applying a preset.",
+    "placeholders": {
+      "name": {
+        "content": "$1",
+        "example": "Ocean"
+      }
+    }
+  },
+  "stopAria": {
+    "message": "色标 $COLOR$，位置 $POSITION$%",
+    "description": "Aria label for a gradient stop handle.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#0E8F6F"
+      },
+      "position": {
+        "content": "$2",
+        "example": "0"
+      }
+    }
+  },
+  "stopTitle": {
+    "message": "$COLOR$ · $POSITION$%",
+    "description": "Title tooltip for a gradient stop.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#0E8F6F"
+      },
+      "position": {
+        "content": "$2",
+        "example": "0"
+      }
+    }
+  },
+  "presetOcean": {
+    "message": "海洋",
+    "description": "Gradient preset name."
+  },
+  "presetSunset": {
+    "message": "日落",
+    "description": "Gradient preset name."
+  },
+  "presetForest": {
+    "message": "森林",
+    "description": "Gradient preset name."
+  },
+  "presetAurora": {
+    "message": "极光",
+    "description": "Gradient preset name."
+  },
+  "presetBerry": {
+    "message": "浆果",
+    "description": "Gradient preset name."
+  },
+  "presetSky": {
+    "message": "天空",
+    "description": "Gradient preset name."
+  }
+}

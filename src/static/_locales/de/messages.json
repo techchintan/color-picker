@@ -1,0 +1,450 @@
+{
+  "extName": {
+    "message": "WhatColor - Farbwähler & Pipette",
+    "description": "Extension name shown in the store and browser UI."
+  },
+  "extDescription": {
+    "message": "Der schnellste Farbwähler und die schnellste Pipette für Designer. HEX-, RGB- und HSL-Codes auf jeder Webseite sofort erkennen und kopieren.",
+    "description": "Extension description for the store and browser."
+  },
+  "actionTitle": {
+    "message": "WhatColor",
+    "description": "Toolbar button tooltip."
+  },
+  "commandOpenDescription": {
+    "message": "WhatColor öffnen",
+    "description": "Keyboard command description."
+  },
+  "appName": {
+    "message": "WhatColor",
+    "description": "Product name in UI headers."
+  },
+  "brandTagline": {
+    "message": "HEX · Pipette",
+    "description": "Short brand tagline under the product name."
+  },
+  "copy": {
+    "message": "Kopieren",
+    "description": "Copy button label."
+  },
+  "copied": {
+    "message": "Kopiert",
+    "description": "Toast when clipboard write succeeds."
+  },
+  "copyFailed": {
+    "message": "Kopieren fehlgeschlagen",
+    "description": "Toast when clipboard write fails."
+  },
+  "clear": {
+    "message": "Leeren",
+    "description": "Clear history button."
+  },
+  "add": {
+    "message": "Hinzufügen",
+    "description": "Add palette button."
+  },
+  "save": {
+    "message": "Speichern",
+    "description": "Save rename button."
+  },
+  "delete": {
+    "message": "Löschen",
+    "description": "Delete palette button."
+  },
+  "rename": {
+    "message": "Umbenennen",
+    "description": "Rename palette button."
+  },
+  "untitled": {
+    "message": "Unbenannt",
+    "description": "Default name for a new palette."
+  },
+  "tabHistory": {
+    "message": "Verlauf",
+    "description": "Popup History tab."
+  },
+  "tabPalettes": {
+    "message": "Paletten",
+    "description": "Popup Palettes tab."
+  },
+  "eyedropper": {
+    "message": "Pipette",
+    "description": "Eyedropper button label."
+  },
+  "picking": {
+    "message": "Auswahl…",
+    "description": "Eyedropper button while active."
+  },
+  "eyedropperUnsupported": {
+    "message": "EyeDropper wird in diesem Browser nicht unterstützt.",
+    "description": "Hint when EyeDropper API is missing."
+  },
+  "colorToolsAria": {
+    "message": "Farbwerkzeuge",
+    "description": "Aria label for popup tabs."
+  },
+  "recentColors": {
+    "message": "Zuletzt verwendete Farben",
+    "description": "History panel heading."
+  },
+  "historyEmpty": {
+    "message": "Wähle eine Farbe, um den Verlauf zu starten.",
+    "description": "Empty history state."
+  },
+  "historyCleared": {
+    "message": "Verlauf geleert",
+    "description": "Toast after clearing history."
+  },
+  "newPalettePlaceholder": {
+    "message": "Name der neuen Palette",
+    "description": "Create palette input placeholder."
+  },
+  "paletteCreated": {
+    "message": "Palette erstellt",
+    "description": "Toast after creating a palette."
+  },
+  "paletteDeleted": {
+    "message": "Palette gelöscht",
+    "description": "Toast after deleting a palette."
+  },
+  "addedToPalette": {
+    "message": "Zur Palette hinzugefügt",
+    "description": "Toast after adding a color to a palette."
+  },
+  "addColor": {
+    "message": "+ Farbe",
+    "description": "Add current color to palette."
+  },
+  "paletteEmpty": {
+    "message": "Noch keine Farben. Aktuelle Farbe hinzufügen.",
+    "description": "Empty palette colors state."
+  },
+  "noPalettes": {
+    "message": "Erstelle eine Palette, um Projektfarben zu gruppieren.",
+    "description": "Empty palettes list."
+  },
+  "removeColorHint": {
+    "message": "$COLOR$ (Rechtsklick zum Entfernen)",
+    "description": "Title on palette swatches.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "pickFromImage": {
+    "message": "Aus Bild wählen",
+    "description": "Footer link to image picker."
+  },
+  "gradientMaker": {
+    "message": "Verlaufsgenerator",
+    "description": "Footer link / page title for gradient tool."
+  },
+  "settingsPrivacy": {
+    "message": "Einstellungen & Datenschutz",
+    "description": "Footer link to options."
+  },
+  "currentColorAria": {
+    "message": "Aktuelle Farbe $COLOR$",
+    "description": "Aria label for current swatch.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "selectColorAria": {
+    "message": "$COLOR$ auswählen",
+    "description": "Aria label for selectable swatches.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "optionsSubtitle": {
+    "message": "Einstellungen bleiben auf diesem Gerät. Nichts wird an einen Server gesendet.",
+    "description": "Options page subtitle."
+  },
+  "defaultsTitle": {
+    "message": "Standards",
+    "description": "Defaults section heading."
+  },
+  "defaultsDesc": {
+    "message": "Lege fest, wie kopierte Farben beim Auswählen formatiert werden.",
+    "description": "Defaults section description."
+  },
+  "preferredFormat": {
+    "message": "Bevorzugtes Format",
+    "description": "Preferred format label."
+  },
+  "historyLimit": {
+    "message": "Verlaufslimit",
+    "description": "History limit label."
+  },
+  "autoCopy": {
+    "message": "Bevorzugtes Format nach dem Auswählen automatisch kopieren",
+    "description": "Auto-copy checkbox label."
+  },
+  "localDataTitle": {
+    "message": "Lokale Daten",
+    "description": "Local data section heading."
+  },
+  "localDataDesc": {
+    "message": "Verlauf und Paletten werden nur im lokalen Speicher des Browsers gespeichert.",
+    "description": "Local data section description."
+  },
+  "clearHistory": {
+    "message": "Verlauf leeren",
+    "description": "Clear history button on options."
+  },
+  "clearAllData": {
+    "message": "Alle Daten löschen",
+    "description": "Clear all data button."
+  },
+  "clearAllConfirm": {
+    "message": "Alle lokalen Farbdaten löschen? Dadurch werden Verlauf, Paletten und Einstellungen zurückgesetzt.",
+    "description": "Confirm dialog for clear all."
+  },
+  "settingsSaved": {
+    "message": "Einstellungen gespeichert",
+    "description": "Status after saving settings."
+  },
+  "allDataCleared": {
+    "message": "Alle lokalen Daten gelöscht",
+    "description": "Status after clearing all data."
+  },
+  "privacyTitle": {
+    "message": "Datenschutz",
+    "description": "Privacy section heading."
+  },
+  "privacyBody": {
+    "message": "WhatColor verkauft keine personenbezogenen Daten. Ausgewählte Farben bleiben in deinem Browser. Anonyme Nutzungsanalysen (Seitenaufrufe und Installationen) können über Google Analytics gesendet werden. Funktioniert in Chrome, Edge, Firefox, Brave, Opera und Safari (als Web-Erweiterung).",
+    "description": "Privacy section body."
+  },
+  "privacyAnalytics": {
+    "message": "Nutzungsanalysen über Google Analytics (Measurement Protocol)",
+    "description": "Privacy bullet."
+  },
+  "privacyNoAds": {
+    "message": "Keine Werbenetzwerke",
+    "description": "Privacy bullet."
+  },
+  "privacyLocalStorage": {
+    "message": "Verlauf und Paletten bleiben im lokalen Speicher",
+    "description": "Privacy bullet."
+  },
+  "privacyNoContentScripts": {
+    "message": "Keine Content-Scripts auf Websites",
+    "description": "Privacy bullet."
+  },
+  "fullPrivacyPolicy": {
+    "message": "Vollständige Datenschutzerklärung",
+    "description": "Link to privacy policy."
+  },
+  "imageTitle": {
+    "message": "Aus Bild wählen",
+    "description": "Image picker page title."
+  },
+  "imageSubtitle": {
+    "message": "Lade ein lokales Bild hoch und klicke auf ein Pixel, um die Farbe zu erfassen.",
+    "description": "Image picker subtitle."
+  },
+  "imageSection": {
+    "message": "Bild",
+    "description": "Image section heading."
+  },
+  "imageSectionDesc": {
+    "message": "Funktioniert mit PNG, JPG oder WebP. Farben bleiben auf diesem Gerät.",
+    "description": "Image section description."
+  },
+  "uploadImage": {
+    "message": "Bild hochladen",
+    "description": "Upload image button."
+  },
+  "canvasEmpty": {
+    "message": "Lade ein Bild hoch, um Farben auszuwählen.",
+    "description": "Empty canvas placeholder."
+  },
+  "hintLoaded": {
+    "message": "Klicke auf ein Pixel im Bild, um die Farbe zu erfassen.",
+    "description": "Hint when image is loaded."
+  },
+  "hintEmpty": {
+    "message": "Wähle oben eine Datei und klicke dann auf die Vorschau.",
+    "description": "Hint when no image is loaded."
+  },
+  "selectedColor": {
+    "message": "Ausgewählte Farbe",
+    "description": "Selected color section heading."
+  },
+  "colorPicked": {
+    "message": "Farbe ausgewählt",
+    "description": "Status when color is picked without auto-copy."
+  },
+  "imageLoaded": {
+    "message": "Bild geladen",
+    "description": "Status after image upload."
+  },
+  "gradientSubtitle": {
+    "message": "Erstelle lineare oder radiale Verläufe und kopiere fertiges CSS.",
+    "description": "Gradient page subtitle."
+  },
+  "previewTitle": {
+    "message": "Vorschau",
+    "description": "Preview section heading."
+  },
+  "previewDesc": {
+    "message": "Klicke auf die Stop-Leiste, um Farben hinzuzufügen. Ziehe die Griffe zum Verschieben.",
+    "description": "Preview section description."
+  },
+  "gradientTypeAria": {
+    "message": "Verlaufstyp",
+    "description": "Aria label for gradient type control."
+  },
+  "linear": {
+    "message": "Linear",
+    "description": "Linear gradient mode."
+  },
+  "radial": {
+    "message": "Radial",
+    "description": "Radial gradient mode."
+  },
+  "angleLabel": {
+    "message": "Winkel $ANGLE$°",
+    "description": "Angle slider label.",
+    "placeholders": {
+      "angle": {
+        "content": "$1",
+        "example": "90"
+      }
+    }
+  },
+  "stopsTitle": {
+    "message": "Stops",
+    "description": "Stops section heading."
+  },
+  "stopsDesc": {
+    "message": "Bearbeite Farbe und Position des aktiven Stops.",
+    "description": "Stops section description."
+  },
+  "addStop": {
+    "message": "Stop hinzufügen",
+    "description": "Add stop button."
+  },
+  "colorLabel": {
+    "message": "Farbe",
+    "description": "Color field label."
+  },
+  "stopColorPickerAria": {
+    "message": "Stop-Farbwähler",
+    "description": "Aria label for stop color input."
+  },
+  "positionLabel": {
+    "message": "Position $POSITION$%",
+    "description": "Position slider label.",
+    "placeholders": {
+      "position": {
+        "content": "$1",
+        "example": "50"
+      }
+    }
+  },
+  "removeStop": {
+    "message": "Stop entfernen",
+    "description": "Remove stop button."
+  },
+  "presetsTitle": {
+    "message": "Vorlagen",
+    "description": "Presets section heading."
+  },
+  "presetsDesc": {
+    "message": "Starte mit einer fertigen Mischung und passe die Stops an.",
+    "description": "Presets section description."
+  },
+  "cssTitle": {
+    "message": "CSS",
+    "description": "CSS section heading."
+  },
+  "cssDesc": {
+    "message": "Kopieren und in dein Stylesheet einfügen.",
+    "description": "CSS section description."
+  },
+  "copyCss": {
+    "message": "CSS kopieren",
+    "description": "Copy CSS button."
+  },
+  "cssCopied": {
+    "message": "CSS kopiert",
+    "description": "Status after copying CSS."
+  },
+  "keepTwoStops": {
+    "message": "Mindestens 2 Stops behalten",
+    "description": "Error when removing last stops."
+  },
+  "presetApplied": {
+    "message": "$NAME$ angewendet",
+    "description": "Status after applying a preset.",
+    "placeholders": {
+      "name": {
+        "content": "$1",
+        "example": "Ocean"
+      }
+    }
+  },
+  "stopAria": {
+    "message": "Stop $COLOR$ bei $POSITION$%",
+    "description": "Aria label for a gradient stop handle.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#0E8F6F"
+      },
+      "position": {
+        "content": "$2",
+        "example": "0"
+      }
+    }
+  },
+  "stopTitle": {
+    "message": "$COLOR$ · $POSITION$%",
+    "description": "Title tooltip for a gradient stop.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#0E8F6F"
+      },
+      "position": {
+        "content": "$2",
+        "example": "0"
+      }
+    }
+  },
+  "presetOcean": {
+    "message": "Ozean",
+    "description": "Gradient preset name."
+  },
+  "presetSunset": {
+    "message": "Sonnenuntergang",
+    "description": "Gradient preset name."
+  },
+  "presetForest": {
+    "message": "Wald",
+    "description": "Gradient preset name."
+  },
+  "presetAurora": {
+    "message": "Aurora",
+    "description": "Gradient preset name."
+  },
+  "presetBerry": {
+    "message": "Beere",
+    "description": "Gradient preset name."
+  },
+  "presetSky": {
+    "message": "Himmel",
+    "description": "Gradient preset name."
+  }
+}
