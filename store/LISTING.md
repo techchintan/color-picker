@@ -52,8 +52,11 @@ All files are in `store/assets/`:
 | Store icon | `store-icon-128.png` | 128×128 |
 | Small promo tile | `promo-tile-440x280.png` | 440×280 |
 | Marquee promo tile (optional) | `marquee-1400x560.png` | 1400×560 |
-| Screenshot 1 | `screenshot-1-1280x800.png` | 1280×800 |
-| Screenshot 2 | `screenshot-2-1280x800.png` | 1280×800 |
+| Screenshot 1 | `screenshot-1-1280x800.png` | 1280×800 — Eyedropper, history & palettes |
+| Screenshot 2 | `screenshot-2-1280x800.png` | 1280×800 — HEX / RGB / HSL / CMYK |
+| Screenshot 3 | `screenshot-3-1280x800.png` | 1280×800 — Pick from image |
+| Screenshot 4 | `screenshot-4-1280x800.png` | 1280×800 — Gradient maker |
+| Screenshot 5 | `screenshot-5-1280x800.png` | 1280×800 — Privacy-first (zh-CN) |
 
 Extension package icons (inside the ZIP) live at `icons/icon-16.png`, `icons/icon-48.png`, `icons/icon-128.png` (from `src/static/icons/`).
 
