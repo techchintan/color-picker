@@ -1,6 +1,6 @@
 {
   "name": "whatcolor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The fastest color picker and eyedropper for designers. Instantly identify and copy HEX, RGB, and HSL codes on any webpage.",
   "scripts": {
     "start": "node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --watch --progress --config webpack.dev.js",
