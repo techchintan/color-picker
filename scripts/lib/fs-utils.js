@@ -58,6 +58,13 @@ function zipFolder(sourceDir, zipPath) {
   });
 }
 
+function readPackageVersion() {
+  const pkg = JSON.parse(
+    fs.readFileSync(path.join(root, 'package.json'), 'utf8')
+  );
+  return pkg.version;
+}
+
 module.exports = {
   root,
   dist,
@@ -65,4 +72,5 @@ module.exports = {
   rimraf,
   copyDir,
   zipFolder,
+  readPackageVersion,
 };

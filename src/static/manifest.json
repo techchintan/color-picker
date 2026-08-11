@@ -17,7 +17,9 @@
       "128": "icons/icon-128.png"
     }
   },
-  "permissions": ["storage"],
+  "permissions": [
+    "storage"
+  ],
   "options_page": "options.html",
   "options_ui": {
     "page": "options.html",
