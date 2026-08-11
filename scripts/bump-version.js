@@ -8,13 +8,28 @@ const targets = [
   path.join(root, 'src', 'static', 'manifest.firefox.json'),
 ];
 
+/**
+ * Bump patch with base-10 rollover per segment (0–9):
+ * 1.0.8 → 1.0.9 → 1.1.0 → … → 1.9.9 → 2.0.0
+ */
 function bumpPatch(version) {
   const parts = String(version).split('.').map((n) => Number(n));
   if (parts.length !== 3 || parts.some((n) => !Number.isInteger(n) || n < 0)) {
     throw new Error(`Unsupported version format: ${version}`);
   }
-  parts[2] += 1;
-  return parts.join('.');
+
+  let [major, minor, patch] = parts;
+  patch += 1;
+  if (patch > 9) {
+    patch = 0;
+    minor += 1;
+  }
+  if (minor > 9) {
+    minor = 0;
+    major += 1;
+  }
+
+  return [major, minor, patch].join('.');
 }
 
 function setVersion(filePath, version) {
