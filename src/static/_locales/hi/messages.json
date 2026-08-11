@@ -1,0 +1,450 @@
+{
+  "extName": {
+    "message": "WhatColor - कलर पिकर और आईड्रॉपर",
+    "description": "Extension name shown in the store and browser UI."
+  },
+  "extDescription": {
+    "message": "डिज़ाइनरों के लिए सबसे तेज़ कलर पिकर और आईड्रॉपर। किसी भी वेबपेज पर HEX, RGB और HSL कोड तुरंत पहचानें और कॉपी करें।",
+    "description": "Extension description for the store and browser."
+  },
+  "actionTitle": {
+    "message": "WhatColor",
+    "description": "Toolbar button tooltip."
+  },
+  "commandOpenDescription": {
+    "message": "WhatColor खोलें",
+    "description": "Keyboard command description."
+  },
+  "appName": {
+    "message": "WhatColor",
+    "description": "Product name in UI headers."
+  },
+  "brandTagline": {
+    "message": "HEX · आईड्रॉपर",
+    "description": "Short brand tagline under the product name."
+  },
+  "copy": {
+    "message": "कॉपी",
+    "description": "Copy button label."
+  },
+  "copied": {
+    "message": "कॉपी हो गया",
+    "description": "Toast when clipboard write succeeds."
+  },
+  "copyFailed": {
+    "message": "कॉपी विफल",
+    "description": "Toast when clipboard write fails."
+  },
+  "clear": {
+    "message": "साफ़ करें",
+    "description": "Clear history button."
+  },
+  "add": {
+    "message": "जोड़ें",
+    "description": "Add palette button."
+  },
+  "save": {
+    "message": "सहेजें",
+    "description": "Save rename button."
+  },
+  "delete": {
+    "message": "हटाएँ",
+    "description": "Delete palette button."
+  },
+  "rename": {
+    "message": "नाम बदलें",
+    "description": "Rename palette button."
+  },
+  "untitled": {
+    "message": "शीर्षकहीन",
+    "description": "Default name for a new palette."
+  },
+  "tabHistory": {
+    "message": "इतिहास",
+    "description": "Popup History tab."
+  },
+  "tabPalettes": {
+    "message": "पैलेट",
+    "description": "Popup Palettes tab."
+  },
+  "eyedropper": {
+    "message": "आईड्रॉपर",
+    "description": "Eyedropper button label."
+  },
+  "picking": {
+    "message": "चुन रहे हैं…",
+    "description": "Eyedropper button while active."
+  },
+  "eyedropperUnsupported": {
+    "message": "इस ब्राउज़र में EyeDropper समर्थित नहीं है।",
+    "description": "Hint when EyeDropper API is missing."
+  },
+  "colorToolsAria": {
+    "message": "रंग उपकरण",
+    "description": "Aria label for popup tabs."
+  },
+  "recentColors": {
+    "message": "हाल के रंग",
+    "description": "History panel heading."
+  },
+  "historyEmpty": {
+    "message": "इतिहास शुरू करने के लिए एक रंग चुनें।",
+    "description": "Empty history state."
+  },
+  "historyCleared": {
+    "message": "इतिहास साफ़ हो गया",
+    "description": "Toast after clearing history."
+  },
+  "newPalettePlaceholder": {
+    "message": "नए पैलेट का नाम",
+    "description": "Create palette input placeholder."
+  },
+  "paletteCreated": {
+    "message": "पैलेट बनाया गया",
+    "description": "Toast after creating a palette."
+  },
+  "paletteDeleted": {
+    "message": "पैलेट हटाया गया",
+    "description": "Toast after deleting a palette."
+  },
+  "addedToPalette": {
+    "message": "पैलेट में जोड़ा गया",
+    "description": "Toast after adding a color to a palette."
+  },
+  "addColor": {
+    "message": "+ रंग",
+    "description": "Add current color to palette."
+  },
+  "paletteEmpty": {
+    "message": "अभी कोई रंग नहीं। वर्तमान स्वॉच जोड़ें।",
+    "description": "Empty palette colors state."
+  },
+  "noPalettes": {
+    "message": "प्रोजेक्ट रंगों को समूहबद्ध करने के लिए पैलेट बनाएँ।",
+    "description": "Empty palettes list."
+  },
+  "removeColorHint": {
+    "message": "$COLOR$ (हटाने के लिए राइट-क्लिक)",
+    "description": "Title on palette swatches.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "pickFromImage": {
+    "message": "इमेज से चुनें",
+    "description": "Footer link to image picker."
+  },
+  "gradientMaker": {
+    "message": "ग्रेडिएंट मेकर",
+    "description": "Footer link / page title for gradient tool."
+  },
+  "settingsPrivacy": {
+    "message": "सेटिंग्स और गोपनीयता",
+    "description": "Footer link to options."
+  },
+  "currentColorAria": {
+    "message": "वर्तमान रंग $COLOR$",
+    "description": "Aria label for current swatch.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "selectColorAria": {
+    "message": "$COLOR$ चुनें",
+    "description": "Aria label for selectable swatches.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#2F6F5E"
+      }
+    }
+  },
+  "optionsSubtitle": {
+    "message": "सेटिंग्स इस डिवाइस पर रहती हैं। सर्वर पर कुछ नहीं भेजा जाता।",
+    "description": "Options page subtitle."
+  },
+  "defaultsTitle": {
+    "message": "डिफ़ॉल्ट",
+    "description": "Defaults section heading."
+  },
+  "defaultsDesc": {
+    "message": "चुनते समय कॉपी किए गए रंगों का प्रारूप चुनें।",
+    "description": "Defaults section description."
+  },
+  "preferredFormat": {
+    "message": "पसंदीदा प्रारूप",
+    "description": "Preferred format label."
+  },
+  "historyLimit": {
+    "message": "इतिहास सीमा",
+    "description": "History limit label."
+  },
+  "autoCopy": {
+    "message": "चुनने के बाद पसंदीदा प्रारूप अपने आप कॉपी करें",
+    "description": "Auto-copy checkbox label."
+  },
+  "localDataTitle": {
+    "message": "स्थानीय डेटा",
+    "description": "Local data section heading."
+  },
+  "localDataDesc": {
+    "message": "रंग इतिहास और पैलेट केवल ब्राउज़र लोकल स्टोरेज में संग्रहीत होते हैं।",
+    "description": "Local data section description."
+  },
+  "clearHistory": {
+    "message": "इतिहास साफ़ करें",
+    "description": "Clear history button on options."
+  },
+  "clearAllData": {
+    "message": "सभी डेटा साफ़ करें",
+    "description": "Clear all data button."
+  },
+  "clearAllConfirm": {
+    "message": "सभी स्थानीय रंग डेटा साफ़ करें? इससे इतिहास, पैलेट और सेटिंग्स रीसेट हो जाएँगे।",
+    "description": "Confirm dialog for clear all."
+  },
+  "settingsSaved": {
+    "message": "सेटिंग्स सहेजी गईं",
+    "description": "Status after saving settings."
+  },
+  "allDataCleared": {
+    "message": "सभी स्थानीय डेटा साफ़ हो गया",
+    "description": "Status after clearing all data."
+  },
+  "privacyTitle": {
+    "message": "गोपनीयता",
+    "description": "Privacy section heading."
+  },
+  "privacyBody": {
+    "message": "WhatColor व्यक्तिगत डेटा नहीं बेचता। चुने गए रंग आपके ब्राउज़र में रहते हैं। अनाम उपयोग विश्लेषण (पेज खोलना और इंस्टॉल इवेंट) Google Analytics के माध्यम से भेजे जा सकते हैं। Chrome, Edge, Firefox, Brave, Opera और Safari (वेब एक्सटेंशन के रूप में) में काम करता है।",
+    "description": "Privacy section body."
+  },
+  "privacyAnalytics": {
+    "message": "Google Analytics (Measurement Protocol) के माध्यम से उपयोग विश्लेषण",
+    "description": "Privacy bullet."
+  },
+  "privacyNoAds": {
+    "message": "कोई विज्ञापन नेटवर्क नहीं",
+    "description": "Privacy bullet."
+  },
+  "privacyLocalStorage": {
+    "message": "रंग इतिहास और पैलेट लोकल स्टोरेज में रहते हैं",
+    "description": "Privacy bullet."
+  },
+  "privacyNoContentScripts": {
+    "message": "वेबसाइटों में कोई कंटेंट स्क्रिप्ट इंजेक्ट नहीं",
+    "description": "Privacy bullet."
+  },
+  "fullPrivacyPolicy": {
+    "message": "पूर्ण गोपनीयता नीति",
+    "description": "Link to privacy policy."
+  },
+  "imageTitle": {
+    "message": "इमेज से चुनें",
+    "description": "Image picker page title."
+  },
+  "imageSubtitle": {
+    "message": "एक स्थानीय इमेज अपलोड करें और रंग सैंपल करने के लिए किसी भी पिक्सेल पर क्लिक करें।",
+    "description": "Image picker subtitle."
+  },
+  "imageSection": {
+    "message": "इमेज",
+    "description": "Image section heading."
+  },
+  "imageSectionDesc": {
+    "message": "PNG, JPG या WebP के साथ काम करता है। रंग इस डिवाइस पर रहते हैं।",
+    "description": "Image section description."
+  },
+  "uploadImage": {
+    "message": "इमेज अपलोड करें",
+    "description": "Upload image button."
+  },
+  "canvasEmpty": {
+    "message": "रंग चुनना शुरू करने के लिए एक इमेज अपलोड करें।",
+    "description": "Empty canvas placeholder."
+  },
+  "hintLoaded": {
+    "message": "रंग सैंपल करने के लिए इमेज पर किसी भी पिक्सेल पर क्लिक करें।",
+    "description": "Hint when image is loaded."
+  },
+  "hintEmpty": {
+    "message": "ऊपर एक फ़ाइल चुनें, फिर चुनने के लिए प्रीव्यू पर क्लिक करें।",
+    "description": "Hint when no image is loaded."
+  },
+  "selectedColor": {
+    "message": "चयनित रंग",
+    "description": "Selected color section heading."
+  },
+  "colorPicked": {
+    "message": "रंग चुना गया",
+    "description": "Status when color is picked without auto-copy."
+  },
+  "imageLoaded": {
+    "message": "इमेज लोड हुई",
+    "description": "Status after image upload."
+  },
+  "gradientSubtitle": {
+    "message": "रैखिक या रेडियल ग्रेडिएंट बनाएँ, फिर तैयार CSS कॉपी करें।",
+    "description": "Gradient page subtitle."
+  },
+  "previewTitle": {
+    "message": "प्रीव्यू",
+    "description": "Preview section heading."
+  },
+  "previewDesc": {
+    "message": "रंग जोड़ने के लिए स्टॉप बार पर क्लिक करें। स्थान बदलने के लिए हैंडल खींचें।",
+    "description": "Preview section description."
+  },
+  "gradientTypeAria": {
+    "message": "ग्रेडिएंट प्रकार",
+    "description": "Aria label for gradient type control."
+  },
+  "linear": {
+    "message": "रैखिक",
+    "description": "Linear gradient mode."
+  },
+  "radial": {
+    "message": "रेडियल",
+    "description": "Radial gradient mode."
+  },
+  "angleLabel": {
+    "message": "कोण $ANGLE$°",
+    "description": "Angle slider label.",
+    "placeholders": {
+      "angle": {
+        "content": "$1",
+        "example": "90"
+      }
+    }
+  },
+  "stopsTitle": {
+    "message": "स्टॉप",
+    "description": "Stops section heading."
+  },
+  "stopsDesc": {
+    "message": "सक्रिय स्टॉप का रंग और स्थिति संपादित करें।",
+    "description": "Stops section description."
+  },
+  "addStop": {
+    "message": "स्टॉप जोड़ें",
+    "description": "Add stop button."
+  },
+  "colorLabel": {
+    "message": "रंग",
+    "description": "Color field label."
+  },
+  "stopColorPickerAria": {
+    "message": "स्टॉप कलर पिकर",
+    "description": "Aria label for stop color input."
+  },
+  "positionLabel": {
+    "message": "स्थिति $POSITION$%",
+    "description": "Position slider label.",
+    "placeholders": {
+      "position": {
+        "content": "$1",
+        "example": "50"
+      }
+    }
+  },
+  "removeStop": {
+    "message": "स्टॉप हटाएँ",
+    "description": "Remove stop button."
+  },
+  "presetsTitle": {
+    "message": "प्रीसेट",
+    "description": "Presets section heading."
+  },
+  "presetsDesc": {
+    "message": "तैयार ब्लेंड से शुरू करें, फिर स्टॉप समायोजित करें।",
+    "description": "Presets section description."
+  },
+  "cssTitle": {
+    "message": "CSS",
+    "description": "CSS section heading."
+  },
+  "cssDesc": {
+    "message": "अपनी स्टाइलशीट में कॉपी और पेस्ट करें।",
+    "description": "CSS section description."
+  },
+  "copyCss": {
+    "message": "CSS कॉपी करें",
+    "description": "Copy CSS button."
+  },
+  "cssCopied": {
+    "message": "CSS कॉपी हो गया",
+    "description": "Status after copying CSS."
+  },
+  "keepTwoStops": {
+    "message": "कम से कम 2 स्टॉप रखें",
+    "description": "Error when removing last stops."
+  },
+  "presetApplied": {
+    "message": "$NAME$ लागू हुआ",
+    "description": "Status after applying a preset.",
+    "placeholders": {
+      "name": {
+        "content": "$1",
+        "example": "Ocean"
+      }
+    }
+  },
+  "stopAria": {
+    "message": "स्टॉप $COLOR$ $POSITION$% पर",
+    "description": "Aria label for a gradient stop handle.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#0E8F6F"
+      },
+      "position": {
+        "content": "$2",
+        "example": "0"
+      }
+    }
+  },
+  "stopTitle": {
+    "message": "$COLOR$ · $POSITION$%",
+    "description": "Title tooltip for a gradient stop.",
+    "placeholders": {
+      "color": {
+        "content": "$1",
+        "example": "#0E8F6F"
+      },
+      "position": {
+        "content": "$2",
+        "example": "0"
+      }
+    }
+  },
+  "presetOcean": {
+    "message": "सागर",
+    "description": "Gradient preset name."
+  },
+  "presetSunset": {
+    "message": "सूर्यास्त",
+    "description": "Gradient preset name."
+  },
+  "presetForest": {
+    "message": "वन",
+    "description": "Gradient preset name."
+  },
+  "presetAurora": {
+    "message": "अरोरा",
+    "description": "Gradient preset name."
+  },
+  "presetBerry": {
+    "message": "बेरी",
+    "description": "Gradient preset name."
+  },
+  "presetSky": {
+    "message": "आकाश",
+    "description": "Gradient preset name."
+  }
+}

@@ -1,4 +1,5 @@
 import { storageGet, storageSet } from './browser-api';
+import { t } from './i18n';
 
 export const DEFAULT_SETTINGS = {
   preferredFormat: 'hex',
@@ -81,7 +82,7 @@ export async function createPalette(name) {
   const list = Array.isArray(palettes) ? palettes : [];
   const palette = {
     id: `p_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
-    name: name.trim() || 'Untitled',
+    name: name.trim() || t('untitled'),
     colors: [],
   };
   const next = [palette, ...list];

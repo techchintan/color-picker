@@ -73,7 +73,7 @@ module.exports = {
 
 function getHtmlPlugins(chunks) {
   return chunks.map(chunk => new HtmlPlugin({
-    title: 'WhatColor - Color Picker & Eyedropper',
+    title: '__MSG_extName__',
     filename: `${chunk}.html`,
     chunks: [chunk],
   }))

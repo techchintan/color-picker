@@ -5,11 +5,12 @@ import { writeClipboard } from '../lib/clipboard';
 import { getAllState } from '../lib/storage';
 import { applyTheme } from '../lib/theme';
 import { trackPageView } from '../lib/analytics';
+import { applyDocumentLocale, t } from '../lib/i18n';
 import './gradient.css';
 
 const PRESETS = [
   {
-    name: 'Ocean',
+    nameKey: 'presetOcean',
     type: 'linear',
     angle: 90,
     stops: [
@@ -18,7 +19,7 @@ const PRESETS = [
     ],
   },
   {
-    name: 'Sunset',
+    nameKey: 'presetSunset',
     type: 'linear',
     angle: 135,
     stops: [
@@ -28,7 +29,7 @@ const PRESETS = [
     ],
   },
   {
-    name: 'Forest',
+    nameKey: 'presetForest',
     type: 'linear',
     angle: 180,
     stops: [
@@ -37,7 +38,7 @@ const PRESETS = [
     ],
   },
   {
-    name: 'Aurora',
+    nameKey: 'presetAurora',
     type: 'radial',
     angle: 90,
     stops: [
@@ -47,7 +48,7 @@ const PRESETS = [
     ],
   },
   {
-    name: 'Berry',
+    nameKey: 'presetBerry',
     type: 'linear',
     angle: 45,
     stops: [
@@ -56,7 +57,7 @@ const PRESETS = [
     ],
   },
   {
-    name: 'Sky',
+    nameKey: 'presetSky',
     type: 'radial',
     angle: 90,
     stops: [
@@ -106,6 +107,8 @@ const App = () => {
   const activeStop = stops.find((stop) => stop.id === activeId) || sortedStops[0];
 
   useEffect(() => {
+    applyDocumentLocale();
+    document.title = t('gradientMaker');
     getAllState().then((state) => applyTheme(state.currentColor));
     trackPageView('gradient');
   }, []);
@@ -122,7 +125,7 @@ const App = () => {
 
   const copyText = async (text) => {
     const ok = await writeClipboard(text);
-    flash(ok ? 'CSS copied' : 'Copy failed');
+    flash(ok ? t('cssCopied') : t('copyFailed'));
   };
 
   const updateStop = (id, partial) => {
@@ -152,7 +155,7 @@ const App = () => {
 
   const removeStop = (id) => {
     if (stops.length <= 2) {
-      flash('Keep at least 2 stops');
+      flash(t('keepTwoStops'));
       return;
     }
     setStops((prev) => prev.filter((stop) => stop.id !== id));
@@ -160,12 +163,13 @@ const App = () => {
   };
 
   const applyPreset = (preset) => {
+    const name = t(preset.nameKey);
     const nextStops = preset.stops.map((stop) => createStop(stop.color, stop.position));
     setType(preset.type);
     setAngle(preset.angle);
     setStops(nextStops);
     setActiveId(nextStops[0]?.id || null);
-    flash(`${preset.name} applied`);
+    flash(t('presetApplied', name));
   };
 
   const positionFromEvent = (clientX) => {
@@ -206,37 +210,37 @@ const App = () => {
       <header className="header">
         <img src="icons/icon-128.png" alt="" width={48} height={48} />
         <div>
-          <h1>Gradient maker</h1>
-          <p>Build linear or radial gradients, then copy ready-to-use CSS.</p>
+          <h1>{t('gradientMaker')}</h1>
+          <p>{t('gradientSubtitle')}</p>
         </div>
       </header>
 
       <section className="section">
-        <h2>Preview</h2>
-        <p>Click the stop bar to add colors. Drag handles to reposition.</p>
+        <h2>{t('previewTitle')}</h2>
+        <p>{t('previewDesc')}</p>
         <div className="preview" style={{ background: cssValue }} />
 
         <div className="mode-row">
-          <div className="segmented" role="group" aria-label="Gradient type">
+          <div className="segmented" role="group" aria-label={t('gradientTypeAria')}>
             <button
               type="button"
               className={type === 'linear' ? 'active' : ''}
               onClick={() => setType('linear')}
             >
-              Linear
+              {t('linear')}
             </button>
             <button
               type="button"
               className={type === 'radial' ? 'active' : ''}
               onClick={() => setType('radial')}
             >
-              Radial
+              {t('radial')}
             </button>
           </div>
 
           {type === 'linear' && (
             <label className="angle-field">
-              <span>Angle {angle}°</span>
+              <span>{t('angleLabel', String(angle))}</span>
               <input
                 type="range"
                 min={0}
@@ -261,8 +265,8 @@ const App = () => {
               type="button"
               className={`stop-handle${activeStop?.id === stop.id ? ' active' : ''}`}
               style={{ left: `${stop.position}%`, background: stop.color }}
-              title={`${stop.color} · ${stop.position}%`}
-              aria-label={`Stop ${stop.color} at ${stop.position}%`}
+              title={t('stopTitle', [stop.color, String(stop.position)])}
+              aria-label={t('stopAria', [stop.color, String(stop.position)])}
               onPointerDown={handleDragStart(stop.id)}
               onClick={(e) => {
                 e.stopPropagation();
@@ -276,15 +280,15 @@ const App = () => {
       <section className="section">
         <div className="section-head">
           <div>
-            <h2>Stops</h2>
-            <p>Edit the active stop color and position.</p>
+            <h2>{t('stopsTitle')}</h2>
+            <p>{t('stopsDesc')}</p>
           </div>
           <button
             type="button"
             className="btn btn-ghost"
             onClick={() => addStopAt(50)}
           >
-            Add stop
+            {t('addStop')}
           </button>
         </div>
 
@@ -301,13 +305,13 @@ const App = () => {
             </div>
             <div className="fields">
               <label className="field">
-                <span>Color</span>
+                <span>{t('colorLabel')}</span>
                 <div className="color-row">
                   <input
                     type="color"
                     value={activeStop.color}
                     onChange={(e) => updateStop(activeStop.id, { color: e.target.value })}
-                    aria-label="Stop color picker"
+                    aria-label={t('stopColorPickerAria')}
                   />
                   <input
                     type="text"
@@ -319,7 +323,7 @@ const App = () => {
                 </div>
               </label>
               <label className="field">
-                <span>Position {activeStop.position}%</span>
+                <span>{t('positionLabel', String(activeStop.position))}</span>
                 <input
                   type="range"
                   min={0}
@@ -336,7 +340,7 @@ const App = () => {
                 onClick={() => removeStop(activeStop.id)}
                 disabled={stops.length <= 2}
               >
-                Remove stop
+                {t('removeStop')}
               </button>
             </div>
           </div>
@@ -359,32 +363,35 @@ const App = () => {
       </section>
 
       <section className="section">
-        <h2>Presets</h2>
-        <p>Start from a ready-made blend, then tweak stops.</p>
+        <h2>{t('presetsTitle')}</h2>
+        <p>{t('presetsDesc')}</p>
         <div className="presets">
-          {PRESETS.map((preset) => (
-            <button
-              key={preset.name}
-              type="button"
-              className="preset"
-              style={{ background: buildCss(preset.type, preset.angle, preset.stops) }}
-              onClick={() => applyPreset(preset)}
-              title={preset.name}
-            >
-              <span>{preset.name}</span>
-            </button>
-          ))}
+          {PRESETS.map((preset) => {
+            const name = t(preset.nameKey);
+            return (
+              <button
+                key={preset.nameKey}
+                type="button"
+                className="preset"
+                style={{ background: buildCss(preset.type, preset.angle, preset.stops) }}
+                onClick={() => applyPreset(preset)}
+                title={name}
+              >
+                <span>{name}</span>
+              </button>
+            );
+          })}
         </div>
       </section>
 
       <section className="section">
         <div className="section-head">
           <div>
-            <h2>CSS</h2>
-            <p>Copy and paste into your stylesheet.</p>
+            <h2>{t('cssTitle')}</h2>
+            <p>{t('cssDesc')}</p>
           </div>
           <button type="button" className="btn btn-primary" onClick={() => copyText(cssBlock)}>
-            Copy CSS
+            {t('copyCss')}
           </button>
         </div>
         <pre className="css-block">
@@ -398,6 +405,7 @@ const App = () => {
   );
 };
 
+applyDocumentLocale();
 const container = document.createElement('div');
 document.body.appendChild(container);
 const root = createRoot(container);

@@ -10,6 +10,7 @@ import {
 } from '../lib/storage';
 import { applyTheme } from '../lib/theme';
 import { trackPageView } from '../lib/analytics';
+import { applyDocumentLocale, t } from '../lib/i18n';
 import './options.css';
 
 const App = () => {
@@ -18,6 +19,8 @@ const App = () => {
   const [status, setStatus] = useState('');
 
   useEffect(() => {
+    applyDocumentLocale();
+    document.title = t('extName');
     getAllState().then((state) => {
       setSettings(state.settings);
       setCurrentColor(state.currentColor);
@@ -37,23 +40,21 @@ const App = () => {
   const updateSetting = async (partial) => {
     const next = await saveSettings(partial);
     setSettings(next);
-    flash('Settings saved');
+    flash(t('settingsSaved'));
   };
 
   const handleClearHistory = async () => {
     await clearHistory();
-    flash('History cleared');
+    flash(t('historyCleared'));
   };
 
   const handleClearAll = async () => {
-    const confirmed = window.confirm(
-      'Clear all local color data? This resets history, palettes, and settings.'
-    );
+    const confirmed = window.confirm(t('clearAllConfirm'));
     if (!confirmed) return;
     await clearAllData();
     setSettings({ ...DEFAULT_SETTINGS });
     setCurrentColor(DEFAULT_COLOR);
-    flash('All local data cleared');
+    flash(t('allDataCleared'));
   };
 
   return (
@@ -61,17 +62,17 @@ const App = () => {
       <header className="header">
         <img src="icons/icon-128.png" alt="" width={48} height={48} />
         <div>
-          <h1>WhatColor</h1>
-          <p>Settings stay on this device. Nothing is sent to a server.</p>
+          <h1>{t('appName')}</h1>
+          <p>{t('optionsSubtitle')}</p>
         </div>
       </header>
 
       <section className="section">
-        <h2>Defaults</h2>
-        <p>Choose how copied colors are formatted when you pick.</p>
+        <h2>{t('defaultsTitle')}</h2>
+        <p>{t('defaultsDesc')}</p>
         <div className="fields">
           <div className="field">
-            <label htmlFor="preferredFormat">Preferred format</label>
+            <label htmlFor="preferredFormat">{t('preferredFormat')}</label>
             <select
               id="preferredFormat"
               value={settings.preferredFormat}
@@ -85,7 +86,7 @@ const App = () => {
           </div>
 
           <div className="field">
-            <label htmlFor="historyLimit">History limit</label>
+            <label htmlFor="historyLimit">{t('historyLimit')}</label>
             <input
               id="historyLimit"
               type="number"
@@ -106,20 +107,20 @@ const App = () => {
               checked={settings.autoCopy}
               onChange={(e) => updateSetting({ autoCopy: e.target.checked })}
             />
-            Auto-copy preferred format after picking
+            {t('autoCopy')}
           </label>
         </div>
       </section>
 
       <section className="section">
-        <h2>Local data</h2>
-        <p>Color history and palettes are stored with browser local storage only.</p>
+        <h2>{t('localDataTitle')}</h2>
+        <p>{t('localDataDesc')}</p>
         <div className="actions">
           <button type="button" className="btn btn-ghost" onClick={handleClearHistory}>
-            Clear history
+            {t('clearHistory')}
           </button>
           <button type="button" className="btn btn-danger" onClick={handleClearAll}>
-            Clear all data
+            {t('clearAllData')}
           </button>
         </div>
         <div className="status" role="status">
@@ -128,22 +129,17 @@ const App = () => {
       </section>
 
       <section className="section privacy">
-        <h2>Privacy</h2>
-        <p>
-          WhatColor does not sell personal data. Picked colors stay in your browser.
-          Anonymous usage analytics (page opens and install events) may be sent via Google
-          Analytics. Works in Chrome, Edge, Firefox, Brave, Opera, and Safari (as a Web
-          Extension).
-        </p>
+        <h2>{t('privacyTitle')}</h2>
+        <p>{t('privacyBody')}</p>
         <ul>
-          <li>Usage analytics via Google Analytics (Measurement Protocol)</li>
-          <li>No advertising networks</li>
-          <li>Color history and palettes stay in local storage</li>
-          <li>No content scripts injected into websites</li>
+          <li>{t('privacyAnalytics')}</li>
+          <li>{t('privacyNoAds')}</li>
+          <li>{t('privacyLocalStorage')}</li>
+          <li>{t('privacyNoContentScripts')}</li>
         </ul>
         <p>
           <a href="privacy-policy.html" target="_blank" rel="noreferrer">
-            Full privacy policy
+            {t('fullPrivacyPolicy')}
           </a>
         </p>
       </section>
@@ -151,6 +147,7 @@ const App = () => {
   );
 };
 
+applyDocumentLocale();
 const container = document.createElement('div');
 document.body.appendChild(container);
 const root = createRoot(container);

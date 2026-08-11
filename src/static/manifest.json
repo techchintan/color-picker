@@ -1,6 +1,7 @@
 {
-  "name": "WhatColor - Color Picker & Eyedropper",
-  "description": "The fastest color picker and eyedropper for designers. Instantly identify and copy HEX, RGB, and HSL codes on any webpage.",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
   "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
@@ -10,7 +11,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "WhatColor",
+    "default_title": "__MSG_actionTitle__",
     "default_icon": {
       "16": "icons/icon-16.png",
       "48": "icons/icon-48.png",
@@ -37,7 +38,7 @@
         "default": "Alt+Shift+C",
         "mac": "Alt+Shift+C"
       },
-      "description": "Open WhatColor"
+      "description": "__MSG_commandOpenDescription__"
     }
   },
   "browser_specific_settings": {

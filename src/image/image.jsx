@@ -11,6 +11,7 @@ import { addToHistory, getAllState } from '../lib/storage';
 import { writeClipboard } from '../lib/clipboard';
 import { applyTheme } from '../lib/theme';
 import { trackPageView } from '../lib/analytics';
+import { applyDocumentLocale, t } from '../lib/i18n';
 import './image.css';
 
 const FORMAT_ROWS = [
@@ -36,6 +37,8 @@ const App = () => {
   const formats = getColorFormats(currentColor);
 
   useEffect(() => {
+    applyDocumentLocale();
+    document.title = t('imageTitle');
     getAllState().then((state) => {
       setCurrentColor(state.currentColor);
       setSettings(state.settings);
@@ -55,7 +58,7 @@ const App = () => {
 
   const copyText = async (text) => {
     const ok = await writeClipboard(text);
-    flash(ok ? 'Copied' : 'Copy failed');
+    flash(ok ? t('copied') : t('copyFailed'));
   };
 
   const selectColor = async (hex) => {
@@ -68,7 +71,7 @@ const App = () => {
     if (settings.autoCopy) {
       await copyText(formatColorString(normalized, settings.preferredFormat));
     } else {
-      flash('Color picked');
+      flash(t('colorPicked'));
     }
   };
 
@@ -97,7 +100,7 @@ const App = () => {
       img.onload = () => {
         imageRef.current = img;
         drawImageToCanvas(img);
-        flash('Image loaded');
+        flash(t('imageLoaded'));
       };
       img.src = reader.result;
     };
@@ -121,40 +124,38 @@ const App = () => {
       <header className="header">
         <img src="icons/icon-128.png" alt="" width={48} height={48} />
         <div>
-          <h1>Pick from image</h1>
-          <p>Upload a local image and click any pixel to sample its color.</p>
+          <h1>{t('imageTitle')}</h1>
+          <p>{t('imageSubtitle')}</p>
         </div>
       </header>
 
       <section className="section">
-        <h2>Image</h2>
-        <p>Works with PNG, JPG, or WebP. Colors stay on this device.</p>
+        <h2>{t('imageSection')}</h2>
+        <p>{t('imageSectionDesc')}</p>
         <div className="actions">
           <label className="btn btn-ghost file-btn">
-            Upload image
+            {t('uploadImage')}
             <input type="file" accept="image/*" onChange={handleImageUpload} />
           </label>
         </div>
         <div className="canvas-wrap">
           <canvas ref={canvasRef} onClick={handleCanvasClick} />
           {!imageLoaded && (
-            <div className="canvas-empty">Upload an image to start picking colors.</div>
+            <div className="canvas-empty">{t('canvasEmpty')}</div>
           )}
         </div>
         <p className="hint">
-          {imageLoaded
-            ? 'Click any pixel on the image to sample its color.'
-            : 'Choose a file above, then click the preview to pick.'}
+          {imageLoaded ? t('hintLoaded') : t('hintEmpty')}
         </p>
       </section>
 
       <section className="section">
-        <h2>Selected color</h2>
+        <h2>{t('selectedColor')}</h2>
         <div className="result">
           <div
             className="swatch"
             style={{ background: currentColor }}
-            aria-label={`Current color ${currentColor}`}
+            aria-label={t('currentColorAria', currentColor)}
           >
             <span style={{ color: contrastTextColor(currentColor) }}>{currentColor}</span>
           </div>
@@ -173,7 +174,7 @@ const App = () => {
                   className="copy"
                   onClick={() => copyText(formats?.strings[row.key] || '')}
                 >
-                  Copy
+                  {t('copy')}
                 </button>
               </div>
             ))}
@@ -187,6 +188,7 @@ const App = () => {
   );
 };
 
+applyDocumentLocale();
 const container = document.createElement('div');
 document.body.appendChild(container);
 const root = createRoot(container);
