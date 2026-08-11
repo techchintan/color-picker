@@ -10,6 +10,7 @@ import {
 import { addToHistory, getAllState } from '../lib/storage';
 import { writeClipboard } from '../lib/clipboard';
 import { applyTheme } from '../lib/theme';
+import { trackPageView } from '../lib/analytics';
 import './image.css';
 
 const FORMAT_ROWS = [
@@ -39,6 +40,7 @@ const App = () => {
       setCurrentColor(state.currentColor);
       setSettings(state.settings);
     });
+    trackPageView('image');
   }, []);
 
   useEffect(() => {

@@ -9,6 +9,7 @@ import {
   saveSettings,
 } from '../lib/storage';
 import { applyTheme } from '../lib/theme';
+import { trackPageView } from '../lib/analytics';
 import './options.css';
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       setSettings(state.settings);
       setCurrentColor(state.currentColor);
     });
+    trackPageView('options');
   }, []);
 
   useEffect(() => {
@@ -128,14 +130,15 @@ const App = () => {
       <section className="section privacy">
         <h2>Privacy</h2>
         <p>
-          WhatColor does not collect, store, or transmit personal data. Picked colors
-          never leave your browser. Works in Chrome, Edge, Firefox, Brave, Opera, and Safari
-          (as a Web Extension).
+          WhatColor does not sell personal data. Picked colors stay in your browser.
+          Anonymous usage analytics (page opens and install events) may be sent via Google
+          Analytics. Works in Chrome, Edge, Firefox, Brave, Opera, and Safari (as a Web
+          Extension).
         </p>
         <ul>
-          <li>No analytics or advertising</li>
-          <li>No network requests for core features</li>
-          <li>Only local storage (and clipboard write on Firefox) is used</li>
+          <li>Usage analytics via Google Analytics (Measurement Protocol)</li>
+          <li>No advertising networks</li>
+          <li>Color history and palettes stay in local storage</li>
           <li>No content scripts injected into websites</li>
         </ul>
         <p>

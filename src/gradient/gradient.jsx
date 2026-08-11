@@ -4,6 +4,7 @@ import { contrastTextColor, parseHex } from '../lib/color';
 import { writeClipboard } from '../lib/clipboard';
 import { getAllState } from '../lib/storage';
 import { applyTheme } from '../lib/theme';
+import { trackPageView } from '../lib/analytics';
 import './gradient.css';
 
 const PRESETS = [
@@ -106,6 +107,7 @@ const App = () => {
 
   useEffect(() => {
     getAllState().then((state) => applyTheme(state.currentColor));
+    trackPageView('gradient');
   }, []);
 
   useEffect(() => {

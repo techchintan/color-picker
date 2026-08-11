@@ -19,6 +19,7 @@ import {
 import { openExtensionPage, openOptionsPage } from '../lib/browser-api';
 import { writeClipboard } from '../lib/clipboard';
 import { applyTheme } from '../lib/theme';
+import { trackPageView } from '../lib/analytics';
 import './popup.css';
 
 const TABS = [
@@ -60,6 +61,7 @@ const App = () => {
       setPalettes(state.palettes);
       setSettings(state.settings);
     });
+    trackPageView('popup');
   }, []);
 
   useEffect(() => {

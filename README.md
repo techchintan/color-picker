@@ -13,7 +13,7 @@ Privacy-first Chrome extension to pick colors from any screen or uploaded image,
 
 ## Permissions
 
-Only **`storage`**. No host permissions, no content scripts, no analytics, no network calls for core features.
+**`storage`** for local history/settings, and host access to **`https://www.google-analytics.com/*`** for anonymous usage analytics (Measurement Protocol). No content scripts. Color values are not uploaded.
 
 ## Develop
 

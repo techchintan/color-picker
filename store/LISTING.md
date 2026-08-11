@@ -35,10 +35,10 @@ Features
 • Options page for defaults, clear data, and privacy notes
 
 Privacy
-• Only the storage permission
-• No analytics, ads, or tracking
-• No host permissions and no content scripts
-• Colors and settings stay in local browser storage
+• Storage permission for local history, palettes, and settings
+• Anonymous usage analytics via Google Analytics (Measurement Protocol)
+• Host permission only for google-analytics.com (no content scripts)
+• Colors and settings stay in local browser storage; color values are not uploaded
 
 Works in Chromium browsers that support the EyeDropper API (Chrome, Edge, Brave, Opera, and similar).
 ```
@@ -63,10 +63,10 @@ Answer to match the shipped extension:
 
 | Question | Answer |
 |---|---|
-| Does the extension collect user data? | **No** |
+| Does the extension collect user data? | **Yes** — anonymous usage analytics (page opens, install/update); not colors or browsing content |
 | Remote code? | **No** |
 | Sell user data? | **No** |
-| Use data for purposes unrelated to core functionality? | **No** |
+| Use data for purposes unrelated to core functionality? | **No** — analytics only to improve the extension |
 | Transfer data for purposes unrelated? | **No** |
 | Privacy policy URL | Host `store/privacy-policy.html` (GitHub Pages, your site, etc.) and paste the public HTTPS URL |
 
@@ -76,7 +76,9 @@ Help users pick colors from the screen or images and convert/copy HEX, RGB, HSL,
 
 ### Permission justification
 
-**storage** — Stores the current color, color history, named palettes, and user settings (preferred format, auto-copy, history limit) locally on the device. No data is synced to a remote server by this extension.
+**storage** — Stores the current color, color history, named palettes, user settings, and anonymous analytics client/session identifiers locally on the device.
+
+**Host permission (`https://www.google-analytics.com/*`)** — Sends anonymous usage events (page views, install/update) to Google Analytics via the Measurement Protocol. Does not upload picked colors or webpage content.
 
 ## Distribution
 
@@ -89,4 +91,4 @@ Help users pick colors from the screen or images and convert/copy HEX, RGB, HSL,
 npm run build:chrome
 ```
 
-Upload `dist-chrome.zip` on the Package tab.
+Upload `dist-chrome-<version>.zip` on the Package tab.
